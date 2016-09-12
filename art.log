@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.8)  12 SEP 2016 08:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.8)  12 SEP 2016 09:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,33 +706,48 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
 
-<images/DOL-system.png, id=10, 124.21407pt x 195.73125pt>
+<images/DOL-system.png, id=13, 124.21407pt x 195.73125pt>
 File: images/DOL-system.png Graphic file (type png)
 
 <use images/DOL-system.png>
-Package pdftex.def Info: images/DOL-system.png used on input line 102.
-(pdftex.def)             Requested size: 71.69987pt x 112.98361pt.
+Package pdftex.def Info: images/DOL-system.png used on input line 101.
+(pdftex.def)             Requested size: 53.77354pt x 84.73323pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+<images/branchingL.png, id=14, 718.93594pt x 544.28343pt>
+File: images/branchingL.png Graphic file (type png)
+
+<use images/branchingL.png>
+Package pdftex.def Info: images/branchingL.png used on input line 109.
+(pdftex.def)             Requested size: 250.95233pt x 189.98714pt.
+ [3 <./images/DOL-system.png> <./images/branchingL.png>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 128.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 128.
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1199) has occurred while \output is active []
 
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Overfull \hbox (40.85204pt too wide) detected at line 136
+Overfull \hbox (40.85204pt too wide) detected at line 164
 \OML/ztmcm/m/it/10.95 X\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 l; w\OT1/ztm
 cm/m/n/10.95 ) \OMS/ztmcm/m/n/10.95 ! \OML/ztmcm/m/it/10.95 F\OT1/ztmcm/m/n/10.
 95 (\OML/ztmcm/m/it/10.95 w \OMS/ztmcm/m/n/10.95 ^^A \OML/ztmcm/m/it/10.95 l\OT
@@ -752,97 +767,97 @@ t/10.95 l; w\OT1/ztmcm/m/n/10.95 )] \OMS/ztmcm/m/n/10.95 ^^@ \OT1/ztmcm/m/n/10.
 mcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 w\OT1/ztmcm/m/n/10.95 )
  []
 
-[3 <./images/DOL-system.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
-<images/siatka1.png, id=21, 537.50812pt x 679.03688pt>
+[5] <images/siatka1.png, id=29, 537.50812pt x 679.03688pt>
 File: images/siatka1.png Graphic file (type png)
 
 <use images/siatka1.png>
-Package pdftex.def Info: images/siatka1.png used on input line 195.
+Package pdftex.def Info: images/siatka1.png used on input line 223.
 (pdftex.def)             Requested size: 195.0253pt x 246.36992pt.
 
-<images/siatkaMOD1.png, id=22, 563.85657pt x 712.16063pt>
+<images/siatkaMOD1.png, id=30, 563.85657pt x 712.16063pt>
 File: images/siatkaMOD1.png Graphic file (type png)
 
 <use images/siatkaMOD1.png>
-Package pdftex.def Info: images/siatkaMOD1.png used on input line 201.
+Package pdftex.def Info: images/siatkaMOD1.png used on input line 229.
 (pdftex.def)             Requested size: 195.0253pt x 246.31508pt.
 
 
-LaTeX Warning: Float too large for page by 18.45625pt on input line 206.
+LaTeX Warning: Float too large for page by 18.45625pt on input line 234.
 
-<images/przyklad2.png, id=23, 585.68813pt x 719.68875pt>
+<images/przyklad2.png, id=31, 585.68813pt x 719.68875pt>
 File: images/przyklad2.png Graphic file (type png)
 
 <use images/przyklad2.png>
-Package pdftex.def Info: images/przyklad2.png used on input line 212.
+Package pdftex.def Info: images/przyklad2.png used on input line 240.
 (pdftex.def)             Requested size: 195.0253pt x 239.6504pt.
 
-<images/przyklad2MOD.png, id=24, 591.71063pt x 721.19438pt>
+<images/przyklad2MOD.png, id=32, 591.71063pt x 721.19438pt>
 File: images/przyklad2MOD.png Graphic file (type png)
 
 <use images/przyklad2MOD.png>
-Package pdftex.def Info: images/przyklad2MOD.png used on input line 218.
+Package pdftex.def Info: images/przyklad2MOD.png used on input line 246.
 (pdftex.def)             Requested size: 195.0253pt x 237.69775pt.
 
 
-LaTeX Warning: Float too large for page by 3.11942pt on input line 223.
+LaTeX Warning: Float too large for page by 3.11942pt on input line 251.
 
-<images/przyklad3MOD.png, id=25, 784.43062pt x 715.17188pt>
+<images/przyklad3MOD.png, id=33, 784.43062pt x 715.17188pt>
 File: images/przyklad3MOD.png Graphic file (type png)
 
 <use images/przyklad3MOD.png>
-Package pdftex.def Info: images/przyklad3MOD.png used on input line 229.
+Package pdftex.def Info: images/przyklad3MOD.png used on input line 257.
 (pdftex.def)             Requested size: 258.12274pt x 235.33086pt.
 
-<images/przyklad3.png, id=26, 779.91376pt x 713.66624pt>
+<images/przyklad3.png, id=34, 779.91376pt x 713.66624pt>
 File: images/przyklad3.png Graphic file (type png)
 
 <use images/przyklad3.png>
-Package pdftex.def Info: images/przyklad3.png used on input line 235.
+Package pdftex.def Info: images/przyklad3.png used on input line 263.
 (pdftex.def)             Requested size: 258.12274pt x 236.19662pt.
- [4] [5 <./images/siatka1.png> <./images/siatkaMOD1.png>] [6 <./images/przyklad
-2.png> <./images/przyklad2MOD.png>] [7 <./images/przyklad3MOD.png> <./images/pr
+ [6] [7 <./images/siatka1.png> <./images/siatkaMOD1.png>] [8 <./images/przyklad
+2.png> <./images/przyklad2MOD.png>] [9 <./images/przyklad3MOD.png> <./images/pr
 zyklad3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 246--246
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 []\OT1/ptm/m/n/10.95 http://www.digitaltutors.com/tutorial/570-Procedural-Tree-
 Growth-Using-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 []$\OT1/cmtt/m/n/10.95 http : / / www . zobaczycmatematyke . krk . pl / 025-[]Z
 olkos-[]Krakow /
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 284--285
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 []$\OT1/cmtt/m/n/10.95 http : / / kacikzdrowia . pl / wp-[]content / uploads / 
 2015 / 01 / s % C5 %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
 []$\OT1/cmtt/m/n/10.95 https : / / sadzawka . pl / Convallaria _ majalis _ Aure
 a-[]Konwalia _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 []$\OT1/cmtt/m/n/10.95 https : / / msdn . microsoft . com / pl-[]pl / library /
  system . text .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 []$\OT1/cmtt/m/n/10.95 http : / / net-[]informations . com / faq / general / di
 ctionary-[]list .
  []
@@ -851,17 +866,13 @@ ctionary-[]list .
 Package caption Warning: Unused \captionsetup[table] on input line 29.
 See the caption package documentation for explanation.
 
-[10] (./art.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- )
-(\end occurred when \ifdefined on line 295 was incomplete) 
+[12] (./art.aux) )
+(\end occurred when \ifdefined on line 323 was incomplete) 
 Here is how much of TeX's memory you used:
- 4530 strings out of 494953
- 65274 string characters out of 6180978
- 134155 words of memory out of 5000000
- 7712 multiletter control sequences out of 15000+600000
+ 4554 strings out of 494953
+ 65719 string characters out of 6180978
+ 133163 words of memory out of 5000000
+ 7732 multiletter control sequences out of 15000+600000
  43332 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,13n,43p,838b,568s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -873,10 +884,10 @@ onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on art.pdf (10 pages, 912217 bytes).
+Output written on art.pdf (12 pages, 1037118 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
