@@ -79,22 +79,21 @@
 
 
 \begin{abstract}
-Since the beginning of computer era we are trying to imitate nature. The results of those attempts are mathematical equations describing weather, snow flakes, plant growth or influence of species in individual biomes. In computer graphics fractal structure are often used because they can be simple characterize in mathematics. Those forms are common in naure and can be found in example in broccoli, corals, lightnings or in trees. 
-Self-similar fractals can be created in computer graphics using Lindermayer Systems. This article was created to analyze efficiency of this algorithm in modeling 3D tree triangle meshes for games. The general motivation of this topic is to produce way to procedural modeling and simplified edition of complicated 3D tree models. By combining L-systems with Bezier Curve there is a possibility to produce complicated 3D models. For example tree created with 468 branches having 87200 vertices and it is made in few seconds. In conclusion, time-consuming modeling in 3D programs can be replaced by solution described in this article. 
+Since the beginning of computer era we are trying to imitate nature. The results of those attempts are mathematical equations describing weather, snow flakes, plant growth or influence of species in individual biomes. In computer graphics fractal structure are often used because they can be simple characterize in mathematics. Those forms are common in nature. Self-similar fractals are created in computer graphics using Lindermayer Systems. This article was formed to analyze efficiency of this algorithm in modeling 3D tree triangle meshes for games. The general motivation of this topic is to produce way to procedural modeling and simplified edition of complicated 3D tree models. By combining L-systems with Bezier Curve there is a possibility to produce complicated 3D models. For example tree created with 468 branches having 87200 vertices and it is made in few seconds. In conclusion, time-consuming modeling in 3D programs can be replaced by solution described in this article. 
 \end{abstract}
 
 %%% insert your contribution here
 
 \section{Introduction}
-From beginning of our era we are trying to imitate nature. Results of this attempts are descriptions of natural phenomenon using mathematical equations. Those mathematical statements are used for example in weather forecast, simulation of plant growth, creating snowflakes or lightnings. In computer graphics fractal based structure adopted from nature are often used because they can be simply stored as mathematical formula. One of those formulas is \textit{Lindenmayer System}. It allows user to create a mathematical description of appearance, behavior or grow of plant. 
-\par Using 3D modeling programs, such as \textit{3ds Max} or \textit{Blender}, to create a complex 3D model of tree is very time consuming, because every branch has to be shaped separately. To speed up and  automatize this process L-system can be used. This article is description of implementation and usage of L-System in Unity3D Game Engine. Problem with procedural generated structures using L-System in it's basic description it's that all algorithms are generating static models. It's mean that user can't move, add or do anything with model without recalculating it all over again. The basic idea to add this feature is to use \textit{Bezier Curve}, and generate the mesh based on it.
-\subsection{Fractal}
-One of the most important feature of fractal is self-similarity. It's mean that every part of fractal is similar to whole fractal and can be calculated by iterating over simple formula, which describe this fractal. Never ending patter is created by scaling fractal. Observation of plants brought some conclusion which shows that every plant can be treat as a very complex fractal, with multiple elements so it can be simplified using \textit{Lindenmayer System}.
-\subsection{Lindenmayer System}
-L-system was created in 1968 by Hungarian theoretical biologist and botanist from University of Utrecht Artist Lindenmayer. System was originally devised to describe formal description of simple multicellular organisms. With fast development of computer graphics the L-system is used by the modern artist to create plant models and to simulate its growth. The system in based on rewriting rules, like productions. All system are based on string comprasion, evaluation and conversion. L-system is always includes axiom, rules and number of iterations. Axiom is starting word, rules are production precepts, and number of iterations   is the number how many times rules must be applied to the word.
-\newpage
-\subsection*{DOL System}
-Deterministic and contex free L-system is one of the L-system, where context of the letter have no affect on algorithm. Simple example. When axiom, starting word, is \textit{b} and rules are: $b \rightarrow a$ and $a \rightarrow ab$ with 5 iterations, the example creation is shown at \figurename\ref{DOL}.
+Using 3D modeling programs to create a complex 3D model of tree is very time consuming, because every branch has to be shaped separately.
+To speed up and automatize this process Lindenmayer System can be used. Since 1968, when Aristid Lindenmayer created  grammatic to represent simple multicellular organism, technique has evolved. Now L-Systems are used to manage 3D models of plants\cite{Herbaceus}\cite{WebTree}\cite{Spray}, fire visualization\cite{Sim}, music\cite{MLSystem} or even neural web\cite{LBrain}. Variaty os usage, flexibility and simplicity of this technique creates a possibility to extend it. Developers over years have used this technique to create software like L-studio\cite{L-Studio}, plugins to 3DsMax to animate plant growth\cite{ABartniak} or in Houdini\cite{LHoud}. Most of the algorithms to create 3D tree mesh are generating static models, to change or move branch user must change parameters inside L-System, and the recalculate the whole model. To prevent unnecessary actions and calculation the \textit{Bezier Curve} was added as the tree skeleton. Adding possibility of changing Bezier Points along Bezier Curve, user can change every branch only by moving it's handler and recalculating only this alternated branch.
+\par After long years of plants observations the conclusion was brought, every plant can be treated as very complex fractal. The most important feature of this structure is self-similarity. In mathematics, a self-similar object is exactly or approximately similar to a part of itself (i.e. the whole has the same shape as one or more of the parts)\cite{SelfSimi}. Because of complexity of plants as fractals the simplifications must be applied. To do this the L-System can be used.
+Mentioned above technique is based on rewriting rules, so on replacing subterms of a formula with other terms. All formulas and terms are represented as strings, and L-system is all about changing one string to another based on rules. Every system has to have axiom, starting word, rules of productions and number of iterations, so how many times rules must be applied to word. 
+
+\section{Procedural Systems}
+
+\subsection{DOL System}
+Deterministic and contex free L-system is one of the L-system, where context of the letter have no affect on algorithm. When axiom, starting word, is \textit{b} and rules are: $b \rightarrow a$ and $a \rightarrow ab$ with 5 iterations, the example creation is shown at \figurename\ref{DOL}.
 
 \begin{figure}[!htp]
 \centering
@@ -102,7 +101,7 @@ Deterministic and contex free L-system is one of the L-system, where context of 
 \caption{Example of DOL system\cite{prusinABOP} \label{DOL}}
 \end{figure}
 \FloatBarrier
-\subsection*{Bracket L-System}
+\subsection{Bracket L-System}
 Using additional character in words user can create extra behaviors. L-system always create one long continued line. Using \textit{[} and \textit{]} the \textit{branches} can be created. First character is responsible for starting the branch and next for closing it. Branch is simply new line in geometric interpretation of string created by L-system.
 \begin{figure}[!htp]
 \centering
@@ -114,22 +113,22 @@ Using additional character in words user can create extra behaviors. L-system al
 
 
 
-\subsection*{Parametric L-System}
-To create more complicated models the Parametric L-System was created. Thank to parameters L-system can change the values of variables, in example the steering angle of branch. When in DOL-System the sing \textit{+} was strictly assigned to hardcoded value in this approach the value can be changed in every iteration using \textit{+(r)} where r is some parameter. Every letter or string must have brackets immediatly behind it and within them there can be multiple parameters from \textit{0 $\ldots$ n} seperated with comma. Every parameter can be a mathematical expression, parameters can be divided, multiplied, added, subtracted and etc. Example $C(x\cdot e,e\backslash 2,a+c,b-d)$
-\subsection*{Turtle interpretation of string}
-L-System algorithm generating string. This string must be evaluated to create graphicals content. Created word contains steering, drawing and ommited characters. The sterring characterch are the one who controls the behavior of turtle. Drawin are those which simply adding a line between points.
+\subsection{Parametric L-System}
+To create more complicated models the Parametric L-System was created. Thank to parameters L-system can change the values of variables, in example the steering angle of branch. When in DOL-System the sing \textit{+} was strictly assigned to hard-coded value in this approach the value can be changed in every iteration using \textit{+(r)} where r is some parameter. Every letter or string must have brackets immediately behind it and within them there can be multiple parameters from \textit{0 $\ldots$ n} separated with comma. Every parameter can be a mathematical expression, parameters can be divided, multiplied, added, subtracted and etc. Example $C(x\cdot e,e\backslash 2,a+c,b-d)$
+\subsection{Turtle interpretation of string}
+L-System algorithm generating string. This string must be evaluated to create graphical content. Created word contains steering, drawing and omitted characters. The steering characters are the one which controls the behavior of turtle. Drawn are those which simply adding a line between points.
 \textit{Turtle graphics} is term where turtle have it's position and angle which describes the direction in which it is facing. 
 Sterring characters :
-\begin{itemize}
-\item[+] %Obróć się w lewo o kąt $\alpha$ używając macierzy \textbf{$R_U(\alpha)$}.
-\item[-] %Obróć się w prawo o kąt $\alpha$ używając macierzy \textbf{$R_U(-\alpha)$}.
-\item[\&] %Obróć się w dół o kąt $\alpha$ używając macierzy \textbf{$R_L(\alpha)$}.
-\item[\string^] %Obróć się w górę o kąt $\alpha$ używając macierzy \textbf{$R_L(-\alpha)$}.
-\item[\textbackslash] %Obróć się w lewo o kąt $\alpha$ używając macierzy \textbf{$R_H(\alpha)$}.
-\item[/] %Obróć się w prawo o kąt $\alpha$ używając macierzy \textbf{$R_H(-\alpha)$}.
-\item[|] %Obróć się w około używając macierzy \textbf{$R_U(180\degree)$}.
-\item[[] %Dodaj gałąź.
-\item [\char`\]]  %Skończ gałąź.
+  \begin{itemize}  % local adjustment
+\item[+] Turn  left  by  angle $\delta$.
+\item[-] Turn right by angle  $\delta$.
+\item[\&] Pitch down by angle  $\delta$.
+\item[\string^]Pitch up by angle  $\delta$.
+\item[\textbackslash] Roll left by angle  $\delta$.
+\item[/]Roll right by angle  $\delta$.
+\item[\string|] Turn around, by 180 .
+\item[[] Add branch.
+\item [\char`\]]  End branch.
 \end{itemize}	
 \section{Methods}
 
@@ -293,6 +292,18 @@ Parser created with this implamentation is simple, but creating possibility to e
 
 
 \begin{thebibliography}{99}
+\bibitem{Herbaceus}Development models of herbaceous plants for computer imagery purposes,\url{http://dl.acm.org/citation.cfm?id=378503&CFID=841465770&CFTOKEN=79563252}
+\bibitem{Sim} Simulation and visualization of fire using extended lindenmayer systems
+\bibitem{WebTree}
+L-system based interactive and lightweight web3D tree modeling
+\bibitem{EnviroTree} Simulating tree growth based on internal and environmental factors
+\bibitem{Spray}Simulating and visualising spray deposition on plant canopies
+\bibitem{MLSystem}Musical L-Systems
+\bibitem{LBrain}Evolved neurogenesis and synaptogenesis for robotic control: the L-brain model
+\bibitem{L-Studio}L-studio, \url{http://algorithmicbotany.org/virtual_laboratory/}
+\bibitem{ABartniak}Anna Bartniak
+\bibitem{SelfSimi}How long is the coast of Britain?Statistical self-similarity and fractional dimension 
+\bibitem{LHoud}\url{https://www.sidefx.com/docs/houdini/nodes/sop/lsystem}
 \bibitem{prusinABOP}
 Prusinkiewicz P., Lindermayer A. (2004) The Algorithmic Beauty of Plants.  wersja elektroniczna.
 \bibitem{wlosy}
@@ -306,18 +317,9 @@ http://www.digitaltutors.com/tutorial/570-Procedural-Tree-Growth-Using-L-systems
 \bibitem{speedTreeZrodlo}
 \url{http://www.speedtree.com/images/modeler_lrg.jpg}
 \bibitem{unity}\url{https://unity3d.com/5}
-\bibitem{mono}\url{http://www.mono-project.com/}
 \bibitem{splajn}\url{http://www.zobaczycmatematyke.krk.pl/025-Zolkos-Krakow/b-spline.html}
-\bibitem{treeSketch}TreeSketch:Interactive Procedural Modeling of Trees on a Tablet, Longay S.,  Runions A., Boudon F., Prusinkiewicz P.
-\bibitem{slon}\url{http://kacikzdrowia.pl/wp-content/uploads/2015/01/s%C5%82onecznikb.jpg}
-\bibitem{konw}\url{https://sadzawka.pl/Convallaria_majalis_Aurea-Konwalia_majowa}
-\bibitem{stringBuilder}\url{https://msdn.microsoft.com/pl-pl/library/system.text.stringbuilder%28v=vs.110%29.aspx}
-\bibitem{dict}\url{http://net-informations.com/faq/general/dictionary-list.htm}
-\bibitem{bezUnity}\url{https://www.assetstore.unity3d.com/en/#!/content/11278}
-\bibitem{youtube}\url{https://www.youtube.com/watch?v=o9RK6O2kOKo}
-\bibitem{unityMesh}\url{http://docs.unity3d.com/Manual/class-MeshRenderer.html}
-\bibitem{MBN}\url{http://jayelinda.com/modelling-by-numbers-part-1a/}
 \bibitem {LMat} Rozenberg G., Salomaa A. \textit{The mathematical theory of L systems}, Academic Press, New York, 1980
+
 \end{thebibliography}
 
 \ifdefined\PROCINCLUDED
