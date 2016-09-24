@@ -29,6 +29,8 @@
 \usepackage{blindtext} 
 \usepackage{tocloft}
 \usepackage[labelsep=period]{caption}
+\usepackage{caption}
+\usepackage{subcaption}
 \captionsetup[table]{skip=7pt}
 \captionsetup[figure]{skip=6pt}
 \fancyhead{}
@@ -59,7 +61,7 @@
 \def\runningtitle#1{\fancyhead[CO]{\textit{#1}}}
 \def\runningauthor#1{\fancyhead[CE]{\textit{#1}}}
 \graphicspath{ {figures/} } %%% put all images file into "figures/" subdirectory
-
+\renewcommand{\figurename}{Figure}
 \begin{document}
 \fi
 
@@ -82,7 +84,7 @@
 
 
 \begin{abstract}
-Since the beginning of computer era we are trying to imitate nature. The results of those attempts are mathematical equations describing weather, snow flakes, plant growth or influence of species in individual biomes. In computer graphics fractal structure are often used because they can be simple characterize in mathematics. Those forms are common in nature. Self-similar fractals are created in computer graphics using Lindermayer Systems. This article was formed to analyse efficiency of this algorithm in modelling 3D tree triangle meshes for games. The general motivation of this topic is to produce way to procedural modelling and simplified edition of complicated 3D tree models. By combining L-systems with Bezier Curve there is a possibility to produce complicated 3D models. For example tree created with 468 branches having 87200 vertices and it is made in few seconds. In conclusion, time-consuming modelling in 3D programs can be replaced by solution described in this article. 
+Since the beginning of computer era we are trying to imitate nature. The results of those attempts are mathematical equations describing weather, snow flakes, plant growth or influence of species in individual biomes. In computer graphics fractal structure are often used because they can be simple characterize in mathematics. Those forms are common in nature. Self-similar fractals are created in computer graphics using Lindenmayer Systems. This article was formed to analyse efficiency of this algorithm in modelling 3D tree triangle meshes for games. The general motivation of this topic is to produce way to procedural modelling and simplified edition of complicated 3D tree models. By combining L-systems with Bezier Curve there is a possibility to produce complicated 3D models. For example tree created with 468 branches having 87200 vertices and it is made in few seconds. In conclusion, time-consuming modelling in 3D programs can be replaced by solution described in this article. 
 \end{abstract}
 
 %%% insert your contribution here
@@ -125,7 +127,7 @@ C(x\cdot e,e\backslash 2,a+c,b-d,g)
 L-System algorithm generates string, so it must be evaluated to create graphical content. Created word contains steering, drawing and omitted characters. The steering characters are the one which controls the behaviour of turtle. Drawn are those which simply adding a line between points.
 \textit{Turtle graphics} is term where turtle have it's position, angle which describes the direction in which it is facing and any other parameters that user will use, but position and angle are mandatory.
 Steering characters :
-  \begin{itemize}  % local adjustment
+  \begin{itemize}[labelindent=5.5em,labelsep=1cm,leftmargin=*]  % local adjustment
 \item[+] Turn  left  by  angle $\delta$.
 \item[-] Turn right by angle  $\delta$.
 \item[\&] Pitch down by angle  $\delta$.
@@ -168,7 +170,53 @@ Unity Engine is Game Engine where developer can write application in C\# using M
 \item [LObject] object of L-System
 \item [PosRot] quaternion and position
 \end{itemize}
+Every \textit{LObject} have list of \textit{LFunction} and Dictionary \textit{LType}, where \textit{Key} is string name and \textit{Value} is float.
+Class where are all methods that calculates L-System productions is \textit{Interpreter}, where there are 2  functions \textit{CreateTreeString and} \textit{CreateBezierTree(LObject currentObject)}. First create word from rules and second creates tree skeleton based on this word. \par
+Word is created by replacing one string by another using rules corresponded to LObject. Because in this implementation only Parametric L-System is used, all parameters must be evaluated in every iteration. There are two main cases. When parameters inside bracket have mathematical expression, and when they don't. Second event is simpler to evaluate because algorithm have to find corresponded value to string representation in Dictionary, and than change it for float value. It's performed only at the beginning of algorithm, and with every function. Thanks to this, algorithm does not need to change every parameter in every iteration, it's done only once.
+\begin{equation*} 
+!(vr)F(50)[ \&(a)F(50)A]/(d1)[ \&(a)F(50)A]/(d2)[ \&(a)F(50)A]
+ \end{equation*}
+will change in to
+ \begin{multline*}
+  !(1.732)F(50)[ \&(18.95)F(50)A]/(94.74)[ \&(18.95) \\
+     F(50)A]/(132.63) [ \&(18.95)F(50)A] 
+  \end{multline*}
+  Parameters that have mathematical expression between them have another approach to evaluate them. At first parameters have to be changed to float values then expression must be specified and the last step is to interpret, calculate value as float and then return it as string value.
+  \begin{equation*}
+  F(l) \rightarrow F(l \cdot lr)
+  \end{equation*}
+  In this example the \textit{l} and \textit{lr} parameters will have to be found in Dictionary, then the $ \cdot$ must be interpreted as multiplication sign, and the last step is to return result as string representation of float, so if \textit{l = 6} and \textit{lr = 0.32} the result of this rule would be \textit{F(1.92)}.\par
+Second part of algorithm is to generate tree skeleton, based on created before word. String may consist of several thousand characters, so analysing it is the most time consuming part of this algorithm.
+Every Bezier Curve has it's parameters such as \textit{normal, bi normal and tangent vector}, corresponded to \textit{X,Y and Z position}. Every branch is separate Bezier Curve, which consist of Bezier Points. Those structures can be moved, deleted or added. That operations are based on steering characters in the word.
+Visualisation of those parameters are at \figurename\ref{unity.drawDirection}. Tree skeleton created based on word is at \figurename\ref{unity.krzyweDrzewo}, after modification  \figurename\ref{unity.krzyweDrzewoMod}. \figurename\ref{unity.krzyweDrzewoSiatka} present created mesh placed on points of skeleton.
+\par
+Last step is to generate  mesh based on points of skeleton. Every point on Bezier Curve is center of one 3D cylindrical mesh. Normal, binormal and tangend are used in this part to calculate properly bending angles.
+All calculation are based on Quaternions rotations, to ensure appropriate angles, and because that how the Unity is handling the angles.
+\begin{figure}[!htbp] 
 
+\begin{subfigure}{.5\textwidth}  
+ \centering   
+ \includegraphics[width=1.0\linewidth]
+ {drawDirection} \caption{Visualisation of direction(green), normal and binormal (yellow) of splain.   \label{unity.drawDirection}} 
+\end{subfigure} 
+\begin{subfigure}{.5\textwidth}  
+ \centering  
+  \includegraphics[width=0.5\linewidth]{krzyweDrzewo} 
+  \caption{Tree skeleton. \label{unity.krzyweDrzewo}} 
+  \end{subfigure}
+  \begin{subfigure}{.5\textwidth}
+     \centering   
+     \includegraphics[width=0.5\linewidth]{krzyweDrzewoMod} 
+     \caption{Tree skeleton after modyfication. \label{unity.krzyweDrzewoMod}} 
+   \end{subfigure}
+\begin{subfigure}{.5\textwidth} \ContinuedFloat
+  \centering  
+  \includegraphics[width=1.0\linewidth]{krzyweDrzewoSiatka2} 
+  \caption{Mesh on skeleton after modyfication. \label{unity.krzyweDrzewoSiatka}}
+\end{subfigure} 
+       \caption{ddd} \label{unity.direction} 
+       \end{figure}
+    \newpage
 \section{Results}
 For each of the example the same values was used. Five segments on the side surface and five points on spline, it's mean that every curve was divided on five equal parts. Each result of implemented algorithm was divided into two pictures, screenshot of model generated by algorithm and model after changes. Changes was made by transforming Bezier Points on corresponded to branch Bezier Curve. First all the example and it's description was shown, then the pictures. Description of every example System contains rules, axiom and number of iteration used within it.
 \subsection*{Example 1}
