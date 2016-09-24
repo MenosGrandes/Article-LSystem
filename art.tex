@@ -79,21 +79,21 @@
 
 
 \begin{abstract}
-Since the beginning of computer era we are trying to imitate nature. The results of those attempts are mathematical equations describing weather, snow flakes, plant growth or influence of species in individual biomes. In computer graphics fractal structure are often used because they can be simple characterize in mathematics. Those forms are common in nature. Self-similar fractals are created in computer graphics using Lindermayer Systems. This article was formed to analyze efficiency of this algorithm in modeling 3D tree triangle meshes for games. The general motivation of this topic is to produce way to procedural modeling and simplified edition of complicated 3D tree models. By combining L-systems with Bezier Curve there is a possibility to produce complicated 3D models. For example tree created with 468 branches having 87200 vertices and it is made in few seconds. In conclusion, time-consuming modeling in 3D programs can be replaced by solution described in this article. 
+Since the beginning of computer era we are trying to imitate nature. The results of those attempts are mathematical equations describing weather, snow flakes, plant growth or influence of species in individual biomes. In computer graphics fractal structure are often used because they can be simple characterize in mathematics. Those forms are common in nature. Self-similar fractals are created in computer graphics using Lindermayer Systems. This article was formed to analyse efficiency of this algorithm in modelling 3D tree triangle meshes for games. The general motivation of this topic is to produce way to procedural modelling and simplified edition of complicated 3D tree models. By combining L-systems with Bezier Curve there is a possibility to produce complicated 3D models. For example tree created with 468 branches having 87200 vertices and it is made in few seconds. In conclusion, time-consuming modelling in 3D programs can be replaced by solution described in this article. 
 \end{abstract}
 
 %%% insert your contribution here
 
 \section{Introduction}
-Using 3D modeling programs to create a complex 3D model of tree is very time consuming, because every branch has to be shaped separately.
+Using 3D modelling programs to create a complex 3D mesh of tree is very time consuming, because every branch has to be shaped separately.
 To speed up and automatize this process Lindenmayer System can be used. Since 1968, when Aristid Lindenmayer created  grammatic to represent simple multicellular organism, technique has evolved. Now L-Systems are used to manage 3D models of plants\cite{Herbaceus}\cite{WebTree}\cite{Spray}, fire visualization\cite{Sim}, music\cite{MLSystem} or even neural web\cite{LBrain}. Variaty os usage, flexibility and simplicity of this technique creates a possibility to extend it. Developers over years have used this technique to create software like L-studio\cite{L-Studio}, plugins to 3DsMax to animate plant growth\cite{ABartniak} or in Houdini\cite{LHoud}. Most of the algorithms to create 3D tree mesh are generating static models, to change or move branch user must change parameters inside L-System, and the recalculate the whole model. To prevent unnecessary actions and calculation the \textit{Bezier Curve} was added as the tree skeleton. Adding possibility of changing Bezier Points along Bezier Curve, user can change every branch only by moving it's handler and recalculating only this alternated branch.
-\par After long years of plants observations the conclusion was brought, every plant can be treated as very complex fractal. The most important feature of this structure is self-similarity. In mathematics, a self-similar object is exactly or approximately similar to a part of itself (i.e. the whole has the same shape as one or more of the parts)\cite{SelfSimi}. Because of complexity of plants as fractals the simplifications must be applied. To do this the L-System can be used.
-Mentioned above technique is based on rewriting rules, so on replacing subterms of a formula with other terms. All formulas and terms are represented as strings, and L-system is all about changing one string to another based on rules. Every system has to have axiom, starting word, rules of productions and number of iterations, so how many times rules must be applied to word. 
+\par After long years of plants observations the conclusion was brought, every plant can be treated as a very complex fractal. The most important feature of this structure is self-similarity. In mathematics, a self-similar object is exactly or approximately similar to a part of itself (i.e. the whole has the same shape as one or more of the parts)\cite{SelfSimi}. Because of complexity of plants as fractals the simplifications must be applied. To do this the L-System can be used.
+Mentioned above technique is based on rewriting rules, so on replacing sub-terms of a formula with other terms. All formulas and terms are represented as strings, and L-system is all about changing one string to another based on rules. Every system has to have starting word, called axiom, rules of productions and number of iterations, so how many times rules must be applied to word. 
 
 \section{Procedural Systems}
 
 \subsection{DOL System}
-Deterministic and contex free L-system is one of the L-system, where context of the letter have no affect on algorithm. When axiom, starting word, is \textit{b} and rules are: $b \rightarrow a$ and $a \rightarrow ab$ with 5 iterations, the example creation is shown at \figurename\ref{DOL}.
+Deterministic and context free L-system is one of the L-system, where context of the letter have no affect on algorithm. When axiom is \textit{b} and rules are: $b \rightarrow a$ and $a \rightarrow ab$ with 5 iterations, the example creation is shown at \figurename\ref{DOL}.
 
 \begin{figure}[!htp]
 \centering
@@ -114,26 +114,57 @@ Using additional character in words user can create extra behaviors. L-system al
 
 
 \subsection{Parametric L-System}
-To create more complicated models the Parametric L-System was created. Thank to parameters L-system can change the values of variables, in example the steering angle of branch. When in DOL-System the sing \textit{+} was strictly assigned to hard-coded value in this approach the value can be changed in every iteration using \textit{+(r)} where r is some parameter. Every letter or string must have brackets immediately behind it and within them there can be multiple parameters from \textit{0 $\ldots$ n} separated with comma. Every parameter can be a mathematical expression, parameters can be divided, multiplied, added, subtracted and etc. Example $C(x\cdot e,e\backslash 2,a+c,b-d)$
+To create more complicated models the Parametric L-System was created. Thanks to parameters L-system can change the values of variables, in example the steering angle of branch. When in DOL-System the sign \textit{+} was strictly assigned to hard-coded value, in this approach the value can be changed in every iteration using \textit{+(r)} where \textit{r} is some kind of parameter. Every letter or string must have brackets immediately behind it and within them there can be multiple parameters, separated with comma. Mathematical expressions can be applied between parameters.
+\begin{equation*}
+C(x\cdot e,e\backslash 2,a+c,b-d,g)
+\end{equation*}
 \subsection{Turtle interpretation of string}
-L-System algorithm generating string. This string must be evaluated to create graphical content. Created word contains steering, drawing and omitted characters. The steering characters are the one which controls the behavior of turtle. Drawn are those which simply adding a line between points.
-\textit{Turtle graphics} is term where turtle have it's position and angle which describes the direction in which it is facing. 
-Sterring characters :
+L-System algorithm generates string, so it must be evaluated to create graphical content. Created word contains steering, drawing and omitted characters. The steering characters are the one which controls the behaviour of turtle. Drawn are those which simply adding a line between points.
+\textit{Turtle graphics} is term where turtle have it's position, angle which describes the direction in which it is facing and any other parameters that user will use, but position and angle are mandatory.
+Steering characters :
   \begin{itemize}  % local adjustment
 \item[+] Turn  left  by  angle $\delta$.
 \item[-] Turn right by angle  $\delta$.
 \item[\&] Pitch down by angle  $\delta$.
-\item[\string^]Pitch up by angle  $\delta$.
+\item[\string^] Pitch up by angle  $\delta$.
 \item[\textbackslash] Roll left by angle  $\delta$.
-\item[/]Roll right by angle  $\delta$.
-\item[\string|] Turn around, by 180 .
+\item[/] Roll right by angle  $\delta$.
+\item[\string|] Turn around, by 180 $\degree $.
 \item[[] Add branch.
-\item [\char`\]]  End branch.
+\item[\char`\]] End branch.
+\item[F] Draw line.
 \end{itemize}	
+Any Upper-case letter can be applied as a \textit{Draw line} command.
+\section{Bezier Curves}
+A B-spline is a generalization of the Bézier curve.  Let a vector known as the knot vector be defined 
+\begin{equation*}
+T={t_0,t_1,\ldots,t_m},
+\end{equation*}
+where \textbf{T} is a nondecreasing sequence with $t_i\in[0,1]$ and define control points \textbf{$P_0,P_1,\ldots,P_n$}. Define the degree as
+\begin{equation*}
+p\equiv m-n-1
+\end{equation*}
+The "knots" $t_{p+1},\ldots,t_{m-p-1}$ are called internal knots.
+
+
+\begin{equation*} N_{i}^{j}(t)\;
+\begin{cases} 1\qquad \;if \, t_i\leq t< t_{i+1}\:and\: t_i<t_{i+1} \\ 
+0 \qquad   N_{i}^{j}(t)=\frac{t-t_i}{t_{i+j}-t_i} N_{i}^{j-1}(t) + \frac{t_{i+j+1} - t}{t_{i+j+1} - t_{i+1}} N_{i+1}^{n-1}(t)
+ \end{cases}
+  \end{equation*}
+  where $j=1,2,\ldots,p$. Then the curve is defined by
+  \begin{equation*}
+  C(t)=\sum\limits_{i=0}^n P_i N_{i}^{p}(t)
+  \end{equation*}
+
 \section{Methods}
 
 \section{Results}
+For each of the example the same values was used. Five segments on the side surface and five points on spline, it's mean that every curve was divided on five equal parts. Each result of implemented algorithm was divided into two pictures. Screenshot of model generated by algorithm and model after changes. Changes was made by transforming Bezier Points on corresponded to branch Bezier Curve. First all the example and it's description was shown, then the pictures.
 \subsection*{Example 1}
+In first example for 5 iterations the number of branches is 468, word forming tree have 46086 chars and number of vertices in model is 87200.\newline\par
+This example is modification of simple fractal plant described in \cite{prusinABOP}.
+Every branch is directed at 25  $\degree$ relative to parent branch. As it can be seen at the \figurename \ref{przyklad1.siatka}, the model created by algorithm is complex, using only two rule and one variable. Model after changes have been shown at  \figurename \ref{przyklad1.siatkaMOD}. Every branch in tree have been altered according to user actions.\par 
 Rules: \newline
 \begin{equation*}
 F(l)\rightarrow F(l\cdot2) 
@@ -153,7 +184,32 @@ Variables:
 \begin{equation*}
 r\rightarrow 25
 \end{equation*}
+
+
+
+\FloatBarrier
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\begin{figure}[!htp]
+\centering
+\begin{subfigure}{.68\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{siatka1}
+\caption{Mesh without modification.\\Own source. \label{przyklad1.siatka}}
+\end{subfigure}
+%
+\begin{subfigure}{.68\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{siatkaMOD1}
+\caption{Mesh after modification.\\Own source. \label{przyklad1.siatkaMOD}}
+\end{subfigure}
+\caption{Comparison of meshes for example  1.}
+\label{przyklad1}
+\end{figure}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\newpage
+
 \subsection*{Example 2}
+Next example have 171 branches, world forming tree have 24918 chars and 73700 vertices in model. In this case the custom and longer rules have been used to make model looks like non-deterministic and more chaotic. Model before changes was shown at \figurename\ref{przyklad2.siatka}, and after changes at \figurename\ref{przyklad2.siatkaMOD}. In first example every variable had exactly one parameter without any mathematical operations, except $F(l \cdot 2)$. But in the second example every operation on parameter had to be evaluated and changed to float value, so the time of the calculation had increased significantly. Thanks to usage of multiple parameters and operation between them user can create more complicated structures, using less rules, but for the price of time for parameter evaluations.\\
 Rules: \newline
 \begin{equation*}
 F(l)\rightarrow F(l\cdot2) 
@@ -174,12 +230,27 @@ Variables:
 r\rightarrow 17.2
 \end{equation*}
 
-%\item [] $\rightarrow$ 
-%\end{itemize}
-
-
+\begin{figure}[!htp]
+\centering
+\begin{subfigure}{.68\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{przyklad2}
+\caption{Mesh withouth modification.\\Own source. \label{przyklad2.siatka}}
+\end{subfigure}
+%
+\begin{subfigure}{.68\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{przyklad2MOD}
+\caption{Mesh after modification.\\Own source. \label{przyklad2.siatkaMOD}}
+\end{subfigure}
+\caption{Comparison of meshes for example  2.}
+\label{przyklad2}
+\end{figure}
+\newpage
 
 \subsection*{Example 3}
+Last example have 214 branches, world world forming tree have 24918 chars and 73700 vertices in model. POOOOOOOPRAW!!!!!
+\figurename \ref{przyklad3.siatka} presents unchanged model of last example, \figurename \ref{przyklad3.siatkaMOD} same model after changes. Creating more complicated rule, based on those in example 2, and adding two more simple rules the model in example 3 is more non-deterministic and tree-like than other examples.
 Rules: \newline
 \begin{equation*}
 F(l)\rightarrow F(l\cdot2) 
@@ -217,40 +288,6 @@ k\rightarrow 0.707
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \begin{figure}[!htp]
 \centering
-\begin{subfigure}{.68\textwidth}
-  \centering
-  \includegraphics[width=0.8\linewidth]{siatka1}
-\caption{Mesh without modification.\\Own source. \label{przyklad1.siatka}}
-\end{subfigure}
-%
-\begin{subfigure}{.68\textwidth}
-  \centering
-  \includegraphics[width=0.8\linewidth]{siatkaMOD1}
-\caption{Mesh after modification.\\Own source. \label{przyklad1.siatkaMOD}}
-\end{subfigure}
-\caption{Comparison of meshes for example  1.}
-\label{przyklad1}
-\end{figure}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\begin{figure}[!htp]
-\centering
-\begin{subfigure}{.68\textwidth}
-  \centering
-  \includegraphics[width=0.8\linewidth]{przyklad2}
-\caption{Mesh withouth modification.\\Own source. \label{przyklad2.siatka}}
-\end{subfigure}
-%
-\begin{subfigure}{.68\textwidth}
-  \centering
-  \includegraphics[width=0.8\linewidth]{przyklad2MOD}
-\caption{Mesh after modification.\\Own source. \label{przyklad2.siatkaMOD}}
-\end{subfigure}
-\caption{Comparison of meshes for example  2.}
-\label{przyklad2}
-\end{figure}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\begin{figure}[!htp]
-\centering
 \begin{subfigure}{.9\textwidth}
   \centering
   \includegraphics[width=0.8\linewidth]{przyklad3MOD}
@@ -269,13 +306,10 @@ k\rightarrow 0.707
 
 
 \section{Discussion}
-For each of the example the same values was used. Five segments on the side surface and five points on spline, it's mean that every curve was divided on five equal parts. Each result of implemented algorithm was divided into two pictures. Screenshot of model generated by algorithm and model after changes. Changes was made by transforming Bezier Points on corresponded to branch Bezier Curve. First all the example and it's description was shown, then the pictures.\par
-In first example for 5 iterations the number of branches is 468, word forming tree have 46086 chars and number of vertices in model is 87200.\newline\par
-This example is modification of simple fractal plant described in \cite{prusinABOP}.
-Every branch is directed at 25  $\degree$ relative to parent branch. As it can be seen at the \figurename \ref{przyklad1.siatka}, the model created by algorithm is complex, using only two rule and one variable. Model after changes have been shown at  \figurename \ref{przyklad1.siatkaMOD}. Every branch in tree have been altered according to user actions.\par 
-Next example have 171 branches, world forming tree have 24918 chars and 73700 vertices in model. In this case the custom and longer rules have been used to make model looks like non-deterministic and more chaotic. Model before changes was shown at \figurename\ref{przyklad2.siatka}, and after changes at \figurename\ref{przyklad2.siatkaMOD}. In first example every variable had exactly one parameter without any mathematical operations, except $F(l \cdot 2)$. But in the second example every operation on parameter had to be evaluated and changed to float value, so the time of the calculation had increased significaly. Thanks to usage of multiple parameters and operation between them user can create more complicated structures, using less rules, but for the price of time for parameter evaluations.\par
-Last example have 214 branches, world world forming tree have 24918 chars and 73700 vertices in model. POOOOOOOPRAW!!!!!
-\figurename \ref{przyklad3.siatka} presents unchanged model of last example, \figurename \ref{przyklad3.siatkaMOD} same model after changes. Creating more complicated rule, based on those in example 2, and adding two more simple rules the model in example 3 is more non-deterministic and tree-like than other examples. Time for creating this tree is not greater than time for example 2, because to store all rules algorith use C\# \textit{Dictionary} where the \textit{Key} is from what chars rule must be changed, and \textit{Value} stores to what rule chars must be changed.
+
+
+\par
+ Time for creating this tree is not greater than time for example 2, because to store all rules algorith use C\# \textit{Dictionary} where the \textit{Key} is from what chars rule must be changed, and \textit{Value} stores to what rule chars must be changed.
 
 
  
