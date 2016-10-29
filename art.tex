@@ -31,6 +31,7 @@
 \usepackage[labelsep=period]{caption}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{refcheck}
 \captionsetup[table]{skip=7pt}
 \captionsetup[figure]{skip=6pt}
 \fancyhead{}
@@ -65,14 +66,14 @@
 \begin{document}
 \fi
 
-\papertitle{Contribution title}
+\papertitle{Procedural fractal plants generation}
 \paperauthors{
 %%% insert one \insertauthor for each article author, \email part is optional
-\insertauthor{Filip Rynkiewicz}{Lodz University of Technology \\ {\L}{\'o}d{\'z}, Poland\email{173186@edu.p.lodz.pl}}
-\insertauthor{Stanis{\l}aw Nowak}{MacGilll University \\ Montreal, Canada}
+\insertauthor{Filip Rynkiewicz}{Institute of Information Technology, Lodz University of Technology, ul. Wolczanska 215, 90-924 Lodz, Poland \email{173186@edu.p.lodz.pl}}
+\insertauthor{Piotr Napieralski}{Institute of Information Technology, Lodz University of Technology, ul. Wolczanska 215, 90-924 Lodz, Poland}
 }
-\runningtitle{Contribution\dots} %%% brief title for running head
-\runningauthor{Kowalski, J. et al.} %%% brief authors for running head
+\runningtitle{Lodz University of Technology} %%% brief title for running head
+\runningauthor{Rynkiewicz, F. et al.} %%% brief authors for running head
 
 
 \graphicspath{ {images/} }
@@ -80,7 +81,9 @@
 
 \maketitle
 
+%Zrobic zeby to ladnie wszystko przechodzilo jedno z drugiego i nie olewac.
 
+\nocite{*}
 
 
 \begin{abstract}
@@ -91,13 +94,14 @@ Since the beginning of computer era we are trying to imitate nature. The results
 
 \section{Introduction}
 Using 3D modelling programs to create a complex 3D mesh of tree is very time consuming, because every branch has to be shaped separately.
-To speed up and automatize this process Lindenmayer System can be used. Since 1968, when Aristid Lindenmayer created  grammatic to represent simple multicellular organism, technique has evolved. Now L-Systems are used to manage 3D models of plants\cite{Herbaceus}\cite{WebTree}\cite{Spray}\cite{wlosy}, fire visualization\cite{Sim}, music\cite{MLSystem} or even neural web\cite{LBrain}. Variaty os usage, flexibility and simplicity of this technique creates a possibility to extend it. Developers over years have used this technique to create software like L-studio\cite{L-Studio}, plugins to 3DsMax to animate plant growth\cite{ABartniak} or in Houdini\cite{LHoud}. Most of the algorithms to create 3D tree mesh are generating static models, to change or move branch user must change parameters inside L-System, and the recalculate the whole model. To prevent unnecessary actions and calculation the \textit{Bezier Curve} was added as the tree skeleton. Adding possibility of changing Bezier Points along Bezier Curve, user can change every branch only by moving it's handler and recalculating only this alternated branch.
+To speed up and automatize this process Lindenmayer System can be used. Since 1968, when Aristid Lindenmayer created  grammatic to represent simple multicellular organism, technique has evolved. Now L-Systems are used to manage 3D models of plants\cite{Herbaceus, WebTree, Spray, wlosy, EnviroTree}, fire visualization\cite{Sim}, music\cite{MLSystem} or even neural web\cite{LBrain}. Variaty os usage, flexibility and simplicity of this technique creates a possibility to extend it. Developers over years have used this technique to create software like L-studio\cite{L-Studio}, plugins to 3DsMax to animate plant growth\cite{ABartniak} or in Houdini\cite{LHoud}. Most of the algorithms to create 3D tree mesh are generating static models, to change or move branch user must change parameters inside L-System, and the recalculate the whole model. To prevent unnecessary actions and calculation the \textit{Bezier Curve} was added as the tree skeleton. Adding possibility of changing Bezier Points along Bezier Curve, user can change every branch only by moving it's handler and recalculating only this alternated branch.
 \par After long years of plants observations the conclusion was brought, every plant can be treated as a very complex fractal. The most important feature of this structure is self-similarity. In mathematics, a self-similar object is exactly or approximately similar to a part of itself (i.e. the whole has the same shape as one or more of the parts)\cite{SelfSimi}. Because of complexity of plants as fractals the simplifications must be applied. To do this the L-System can be used.
 Mentioned above technique is based on rewriting rules, so on replacing sub-terms of a formula with other terms. All formulas and terms are represented as strings, and L-system is all about changing one string to another based on rules. Every system has to have starting word, called axiom, rules of productions and number of iterations, so how many times rules must be applied to word. 
 
 \section{Procedural Systems}
-
+%Co ta so proceduralne systemy. Kazdy podpunkt powinien przechodzic do nastepnego plynnie.
 \subsection{DOL System}
+%Wyjasnic co to jest DOL, skroty i ogolnie prowadzic za reke.
 Deterministic and context free L-system is one of the L-system, where context of the letter have no affect on algorithm. When axiom is \textit{b} and rules are: $b \rightarrow a$ and $a \rightarrow ab$ with 5 iterations, the example creation is shown at \figurename\ref{DOL}.
 
 \begin{figure}[!htp]
@@ -107,7 +111,7 @@ Deterministic and context free L-system is one of the L-system, where context of
 \end{figure}
 \FloatBarrier
 \subsection{Bracket L-System}
-Using additional character in words user can create extra behaviors. L-system always create one long continued line. Using \textit{[} and \textit{]} the \textit{branches} can be created. First character is responsible for starting the branch and next for closing it. Branch is simply new line in geometric interpretation of string created by L-system.
+Using additional character in words user can create extra behaviors. L-system always create one long continued line. Using \textit{[} and \textit{]} the \textit{branches} can be created. First character is responsible for starting the branch and next for closing it. Branch is simply new line in geometric interpretation of string created by L-system\figurename\ref{branchingL}.
 \begin{figure}[!htp]
 \centering
   \includegraphics[width=0.7\linewidth]{branchingL}
@@ -119,48 +123,67 @@ Using additional character in words user can create extra behaviors. L-system al
 
 
 \subsection{Parametric L-System}
-To create more complicated models the Parametric L-System was created. Thanks to parameters L-system can change the values of variables, in example the steering angle of branch. When in DOL-System the sign \textit{+} was strictly assigned to hard-coded value, in this approach the value can be changed in every iteration using \textit{+(r)} where \textit{r} is some kind of parameter. Every letter or string must have brackets immediately behind it and within them there can be multiple parameters, separated with comma. Mathematical expressions can be applied between parameters.
-\begin{equation*}
+To create more complicated models the Parametric L-System was created. Thanks to parameters L-system can change the values of variables, in example the steering angle of branch. When in DOL-System the sign \textit{+} was strictly assigned to hard-coded value, in this approach the value can be changed in every iteration using \textit{+(r)} where \textit{r} is some kind of parameter. Every letter or string must have brackets immediately behind it and within them there can be multiple parameters, separated with comma,also mathematical expressions can be applied between parameters. Example:
+%Podsumowanie i odwolanie do tego rownania
+\begin{equation}
 C(x\cdot e,e\backslash 2,a+c,b-d,g)
-\end{equation*}
+\end{equation}
+%Co daje zastosowanie systemu parametrycznego
+
 \subsection{Turtle interpretation of string}
 L-System algorithm generates string, so it must be evaluated to create graphical content. Created word contains steering, drawing and omitted characters. The steering characters are the one which controls the behaviour of turtle. Drawn are those which simply adding a line between points.
 \textit{Turtle graphics} is term where turtle have it's position, angle which describes the direction in which it is facing and any other parameters that user will use, but position and angle are mandatory.
 Steering characters :
-  \begin{itemize}[labelindent=5.5em,labelsep=1cm,leftmargin=*]  % local adjustment
-\item[+] Turn  left  by  angle $\delta$.
-\item[-] Turn right by angle  $\delta$.
-\item[\&] Pitch down by angle  $\delta$.
-\item[\string^] Pitch up by angle  $\delta$.
-\item[\textbackslash] Roll left by angle  $\delta$.
-\item[/] Roll right by angle  $\delta$.
-\item[\string|] Turn around, by 180 $\degree $.
-\item[[] Add branch.
-\item[\char`\]] End branch.
-\item[F] Draw line.
-\end{itemize}	
+%Wyjasnic te steering characters, zamienic ta liste na tabelke
+
+
+\begin{table}[!ht]
+\caption{Your table caption}\label{tab}
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{sign} & \textbf{discription} \\ 
+\hline\hline
++ &Turn  left  by  angle $\delta$. \\ 
+- & Turn right by angle  $\delta$ \\ 
+\& & Pitch down by angle  $\delta$ \\ 
+\string^ & Pitch up by angle  $\delta$ \\ 
+\textbackslash & Roll left by angle  $\delta$ \\ 
+/ & Roll right by angle  $\delta$ \\ 
+\string| & Turn around, by 180 $\degree $ \\ 
+\string[ & Add branch \\ 
+\char`\] & End branch \\ 
+F & Draw line \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+%Wyjasnic po co jest to F i opisac dlaczego kazda litera moze byc litera ktora rysuje linie
 Any Upper-case letter can be applied as a \textit{Draw line} command.
 \section{Bezier Curves}
+%wprowadzic co to jest krzywa Beziera, dlaczego tego uzywam i po co. Zeby nie bylo z dupy. Dopisac do kazdego co jest co.
 A B-spline is a generalization of the Bézier curve \cite{BSpline}. Let a vector known as the knot vector be defined 
-\begin{equation*}
+\begin{equation}
 T={t_0,t_1,\ldots,t_m},
-\end{equation*}
+\end{equation}
 where \textbf{T} is a nondecreasing sequence with $t_i\in[0,1]$ and define control points \textbf{$P_0,P_1,\ldots,P_n$}. Define the degree as
-\begin{equation*}
+\begin{equation}
 p\equiv m-n-1
-\end{equation*}
+\end{equation}
 The "knots" $t_{p+1},\ldots,t_{m-p-1}$ are called internal knots.
 
 
-\begin{equation*} N_{i}^{j}(t)\;
+\begin{equation} N_{i}^{j}(t)\;
 \begin{cases} 1\qquad \;if \, t_i\leq t< t_{i+1}\:and\: t_i<t_{i+1} \\ 
 0 \qquad   N_{i}^{j}(t)=\frac{t-t_i}{t_{i+j}-t_i} N_{i}^{j-1}(t) + \frac{t_{i+j+1} - t}{t_{i+j+1} - t_{i+1}} N_{i+1}^{n-1}(t)
  \end{cases}
-  \end{equation*}
+  \end{equation}
   where $j=1,2,\ldots,p$. Then the curve is defined by
-  \begin{equation*}
+  \begin{equation}
   C(t)=\sum\limits_{i=0}^n P_i N_{i}^{p}(t)
-  \end{equation*}
+  \end{equation}
 
 \section{Methods}
 Unity Engine is Game Engine where developer can write application in C\# using Mono. L-System was implemented with couple of simple structures. This is description of those:
@@ -173,18 +196,16 @@ Unity Engine is Game Engine where developer can write application in C\# using M
 Every \textit{LObject} have list of \textit{LFunction} and Dictionary \textit{LType}, where \textit{Key} is string name and \textit{Value} is float.
 Class where are all methods that calculates L-System productions is \textit{Interpreter}, where there are 2  functions \textit{CreateTreeString and} \textit{CreateBezierTree(LObject currentObject)}. First create word from rules and second creates tree skeleton based on this word. \par
 Word is created by replacing one string by another using rules corresponded to LObject. Because in this implementation only Parametric L-System is used, all parameters must be evaluated in every iteration. There are two main cases. When parameters inside bracket have mathematical expression, and when they don't. Second event is simpler to evaluate because algorithm have to find corresponded value to string representation in Dictionary, and than change it for float value. It's performed only at the beginning of algorithm, and with every function. Thanks to this, algorithm does not need to change every parameter in every iteration, it's done only once.
-\begin{equation*} 
-!(vr)F(50)[ \&(a)F(50)A]/(d1)[ \&(a)F(50)A]/(d2)[ \&(a)F(50)A]
- \end{equation*}
-will change in to
- \begin{multline*}
-  !(1.732)F(50)[ \&(18.95)F(50)A]/(94.74)[ \&(18.95) \\
-     F(50)A]/(132.63) [ \&(18.95)F(50)A] 
-  \end{multline*}
+%Skrocic to i napisac ze to przykladowe.
+\begin{equation} 
+!(vr)F(50)[ \&(a)F(50)A]/(d2) \quad\longrightarrow\quad !(2.13)F(50)[ \&(0.45)F(50)A]/(11.3)
+ \end{equation}
+
   Parameters that have mathematical expression between them have another approach to evaluate them. At first parameters have to be changed to float values then expression must be specified and the last step is to interpret, calculate value as float and then return it as string value.
-  \begin{equation*}
+  %wyjasnic co to jest F(l) i inne literki.
+  \begin{equation}
   F(l) \rightarrow F(l \cdot lr)
-  \end{equation*}
+  \end{equation}
   In this example the \textit{l} and \textit{lr} parameters will have to be found in Dictionary, then the $ \cdot$ must be interpreted as multiplication sign, and the last step is to return result as string representation of float, so if \textit{l = 6} and \textit{lr = 0.32} the result of this rule would be \textit{F(1.92)}.\par
 Second part of algorithm is to generate tree skeleton, based on created before word. String may consist of several thousand characters, so analysing it is the most time consuming part of this algorithm.
 Every Bezier Curve has it's parameters such as \textit{normal, bi normal and tangent vector}, corresponded to \textit{X,Y and Z position}. Every branch is separate Bezier Curve, which consist of Bezier Points. Those structures can be moved, deleted or added. That operations are based on steering characters in the word.
@@ -224,12 +245,12 @@ In first example for 5 iterations the number of branches is 468, word forming tr
 This example is modification of simple fractal plant described in \cite{prusinABOP}.
 Every branch is directed at 25  $\degree$ relative to parent branch. As it can be seen at the \figurename \ref{przyklad1.siatka}, the model created by algorithm is complex, using only two rule and one variable. Model after changes have been shown at  \figurename \ref{przyklad1.siatkaMOD}. Every branch in tree have been altered according to user actions.\par 
 Rules: \newline
-\begin{equation*}
+\begin{equation}
 F(l)\rightarrow F(l\cdot2) 
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
 X(l) \rightarrow F(l)[/(r)X(l)]F(l)[\setminus(r)X(l)-(r)X(l)]F(l)[\setminus(r)X(l)+(r)X(l)] 
-\end{equation*}
+\end{equation}
 Axiom:
 \begin{center}
 X(1)
@@ -239,24 +260,24 @@ Number of iterations:
 5
 \end{center}
 Variables:
-\begin{equation*}
+\begin{equation}
 r\rightarrow 25
-\end{equation*}
+\end{equation}
 
 
-
+%tutaj dorobic diagram przejsc. I jakos zedytowac te rysunki
 \FloatBarrier
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \begin{figure}[!htp]
 
 \centering
-\begin{subfigure}{.68\textwidth}
+\begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.8\linewidth]{siatka1}
 \caption{Mesh without modification.\\Own source. \label{przyklad1.siatka}}
 \end{subfigure}
-%
-\begin{subfigure}{.68\textwidth}
+%\\
+\begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.8\linewidth]{siatkaMOD1}
 \caption{Mesh after modification.\\Own source. \label{przyklad1.siatkaMOD}}
@@ -266,17 +287,17 @@ r\rightarrow 25
 \end{figure}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \newpage
-
+%dodac refleksje i po co to w ogole robie.
 \subsection*{Example 2}
 Next example have 171 branches, world forming tree have 24918 chars and 73700 vertices in model.\par
 In this case the custom and longer rules have been used to make model looks like non-deterministic and more chaotic. Model before changes was shown at \figurename\ref{przyklad2.siatka}, and after changes at \figurename\ref{przyklad2.siatkaMOD}. In first example every variable had exactly one parameter without any mathematical operations, except $F(l \cdot 2)$. But in the second  every operation on parameter had to be evaluated and changed to float value, so the time of the calculation had increased significantly. Thanks to usage of multiple parameters and operation between them user can create more complicated structures, using less rules, but for the price of time for parameter evaluations.\\
 Rules: \newline
-\begin{equation*}
+\begin{equation}
 F(l)\rightarrow F(l\cdot2) 
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
 X(l,w) \rightarrow F(w\cdot l)[/(r\cdot l)X(l,w)-(r)X(w,w)]+(r)F(l)[\setminus(l)X(l,w)+(r)X(l,w)]-(r)F(w)
-\end{equation*}
+\end{equation}
 Axiom:
 \begin{center}
 X(1)
@@ -286,19 +307,18 @@ Number of iterations:
 5
 \end{center}
 Variables:
-\begin{equation*}
+\begin{equation}
 r\rightarrow 17.2
-\end{equation*}
+\end{equation}
 
 \begin{figure}[!htp]
 \centering
-\begin{subfigure}{.68\textwidth}
+\begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.8\linewidth]{przyklad2}
 \caption{Mesh withouth modification.\\Own source. \label{przyklad2.siatka}}
 \end{subfigure}
-%
-\begin{subfigure}{.68\textwidth}
+\begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.8\linewidth]{przyklad2MOD}
 \caption{Mesh after modification.\\Own source. \label{przyklad2.siatkaMOD}}
@@ -312,19 +332,19 @@ r\rightarrow 17.2
 Last example have 214 branches, world world forming tree have 24918 chars and 73700 vertices in model. 
 \figurename \ref{przyklad3.siatka} presents unchanged model of last example, \figurename \ref{przyklad3.siatkaMOD} same model after changes. Creating more complicated rule, based on those in example 2, and adding two more simple rules the model in example 3 is more non-deterministic and tree-like than other examples.
 Rules: \newline
-\begin{equation*}
+\begin{equation}
 F(l)\rightarrow F(l\cdot2) 
-\end{equation*}
+\end{equation}
 \begin{multline*}
 X(l,w) \rightarrow F(w\cdot l)[/(r\cdot l)X(l,w)-(r)X(w,w)C(l)]\\
 +(r)F(l)[G(l)\setminus(l)X(l,w)+(r)X(l,w)]-(r)F(w)-(r)F(w)
 \end{multline*}
-\begin{equation*}
+\begin{equation}
 G(l) \rightarrow F(l/5)[X(l,l)+(r\cdot k)]
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
 C(l) \rightarrow F(l/5)[X(l,l)/(r\cdot k)]
-\end{equation*}
+\end{equation}
 Axiom:
 \begin{center}
 X(1,2)
@@ -334,12 +354,12 @@ Number of iterations:
 5
 \end{center}
 Variables:
-\begin{equation*}
+\begin{equation}
 r\rightarrow 23.5
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
 k\rightarrow 0.707
-\end{equation*}
+\end{equation}
 
 
 
@@ -348,13 +368,13 @@ k\rightarrow 0.707
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \begin{figure}[!htp]
 \centering
-\begin{subfigure}{.9\textwidth}
+\begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.8\linewidth]{przyklad3MOD}
 \caption{Mesh without modification.\\Own source. \label{przyklad3.siatka}}
 \end{subfigure}
 %
-\begin{subfigure}{.9\textwidth}
+\begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.8\linewidth]{przyklad3}
 \caption{Mesh after modification.\\Own source. \label{przyklad3.siatkaMOD}}
@@ -376,19 +396,18 @@ Parser created with this implementation is simple, but creating possibility to e
 % use section* for acknowledgement
 
 
-
+%Jeszcze raz sprawdz bibliografie
 \begin{thebibliography}{99}
-\bibitem{Herbaceus}Development models of herbaceous plants for computer imagery purposes,\url{http://dl.acm.org/citation.cfm?id=378503&CFID=841465770&CFTOKEN=79563252}
-\bibitem{Sim} Simulation and visualization of fire using extended lindenmayer systems
-\bibitem{WebTree}
-L-system based interactive and lightweight web3D tree modeling
+\bibitem{Herbaceus}Development models of herbaceous plants for computer imagery purposes, 
+\bibitem{Sim} Zaniewski T., Bangay S., Simulation and visualization of fire using extended lindenmayer systems
+\bibitem{WebTree}Qi H.,Qiu R.,Jia J., L-system based interactive and lightweight web3D tree modeling
 \bibitem{EnviroTree} Simulating tree growth based on internal and environmental factors
 \bibitem{Spray}Simulating and visualising spray deposition on plant canopies
 \bibitem{MLSystem}Musical L-Systems
 \bibitem{LBrain}Evolved neurogenesis and synaptogenesis for robotic control: the L-brain model
 \bibitem{L-Studio}L-studio, \url{http://algorithmicbotany.org/virtual_laboratory/}
-\bibitem{ABartniak}Anna Bartniak
-\bibitem{SelfSimi}How long is the coast of Britain?Statistical self-similarity and fractional dimension 
+\bibitem{ABartniak}Bartniak A. , 3D animation of plant development using L-systems, 2013
+\bibitem{SelfSimi}How long is the coast of Britain? Statistical self-similarity and fractional dimension 
 \bibitem{LHoud}\url{https://www.sidefx.com/docs/houdini/nodes/sop/lsystem}
 \bibitem{prusinABOP}
 Prusinkiewicz P., Lindermayer A. (2004) The Algorithmic Beauty of Plants.  wersja elektroniczna.
@@ -396,16 +415,11 @@ Prusinkiewicz P., Lindermayer A. (2004) The Algorithmic Beauty of Plants.  wersj
 \url{http://mathworld.wolfram.com/B-Spline.html}
 \bibitem{wlosy}
 Fuhrer M. Hairs, Textures, and Shades: Improving the Realism of Plant Models Generated with L-systems. M.Sc. thesis, University of Calgary, August 2005. wersja elektroniczna
-\bibitem{sca}
-Runions A., Lane B., Prusinkiewicz P. Modeling Trees with a Space Colonization Algorithm,Department of Computer Science, University of Calgary, Canada ,Eurographics Workshop on Natural Phenomena (2007).
-\bibitem{Sub} MacMurchy P., The Use of Subdivision Surfaces in the Modeling of Plants, THE UNIVERSITY OF CALGARY, April, 2004
-\bibitem{VertexVertex} Smith C., On Vertex-Vertex Systems and Their Use in Geometric and Biological Modelling, THE UNIVERSITY OF CALGARY, April, 2006
-\bibitem{houdiniZrodlo}
-http://www.digitaltutors.com/tutorial/570-Procedural-Tree-Growth-Using-L-systems-in-Houdini
-\bibitem{speedTreeZrodlo}
-\url{http://www.speedtree.com/images/modeler_lrg.jpg}
-\bibitem{unity}\url{https://unity3d.com/5}
-\bibitem{splajn}\url{http://www.zobaczycmatematyke.krk.pl/025-Zolkos-Krakow/b-spline.html}
+
+
+
+
+
 \bibitem {LMat} Rozenberg G., Salomaa A. \textit{The mathematical theory of L systems}, Academic Press, New York, 1980
 
 \end{thebibliography}
