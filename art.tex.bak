@@ -167,11 +167,9 @@ To create more complicated models the parametric L-system was developed. Thanks 
 C(x\cdot e,e\backslash 2,a+c,b-d,g)
 \end{equation}
 
-\section{Bézier curves}
+\section{Bézier Curves}
 %wprowadzic co to jest krzywa Beziera, dlaczego tego uzywam i po co. Zeby nie bylo z dupy. Dopisac do kazdego co jest co.
-Combining all mentioned above L-systems user can create model of plan, but without any possibility to change it without recalculating whole system. To add this feature in this work the Bézier curves was added. It will create whole skeleton of tree, and then based on it the mesh will be created.
-
-Bézier Curve is parametric curve
+Bézier Curve is paramet
 A B-spline is a generalization of the Bézier curve \cite{BSpline}. Let a vector known as the knot vector be defined 
 \begin{equation}
 T={t_0,t_1,\ldots,t_m},

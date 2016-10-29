@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  29 OCT 2016 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  29 OCT 2016 16:12
 entering extended mode
 **./art.tex
 (art.tex
@@ -784,173 +784,183 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 105.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 105.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
 
-<images/DOL-system.png, id=9, 124.21407pt x 195.73125pt>
-File: images/DOL-system.png Graphic file (type png)
 
-<use images/DOL-system.png>
-Package pdftex.def Info: images/DOL-system.png used on input line 109.
-(pdftex.def)             Requested size: 53.77354pt x 84.73323pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 110.
+Package refcheck Warning: Unlabelled equation (1) on input line 109.
 
-<images/branchingL.png, id=10, 718.93594pt x 544.28343pt>
-File: images/branchingL.png Graphic file (type png)
-
-<use images/branchingL.png>
-Package pdftex.def Info: images/branchingL.png used on input line 117.
-(pdftex.def)             Requested size: 250.95233pt x 189.98714pt.
- [2 <./images/DOL-system.png>]
-
-Package refcheck Warning: Unlabelled equation (1) on input line 130.
-
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 130.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 109.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 130.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
 
 
-Package refcheck Warning: Unused label `tab' on input line 141.
+Package refcheck Warning: Unlabelled equation (2) on input line 112.
 
+<images/DOL-system.png, id=9, 124.21407pt x 195.73125pt>
+File: images/DOL-system.png Graphic file (type png)
+
+<use images/DOL-system.png>
+Package pdftex.def Info: images/DOL-system.png used on input line 119.
+(pdftex.def)             Requested size: 53.77354pt x 84.73323pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 120.
+ [2]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 151.
-[3 <./images/branchingL.png>]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 138.
 
-Package refcheck Warning: Unlabelled equation (2) on input line 170.
+<images/branchingL.png, id=16, 718.93594pt x 544.28343pt>
+File: images/branchingL.png Graphic file (type png)
 
+<use images/branchingL.png>
+Package pdftex.def Info: images/branchingL.png used on input line 156.
+(pdftex.def)             Requested size: 250.95233pt x 189.98714pt.
 
-Package refcheck Warning: Unlabelled equation (3) on input line 174.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [3 <./images/DOL-system.png>]
 
-Package refcheck Warning: Unlabelled equation (4) on input line 182.
-
-
-Package refcheck Warning: Unlabelled equation (5) on input line 186.
-
-[4]
-
-Package refcheck Warning: Unlabelled equation (6) on input line 202.
+Package refcheck Warning: Unlabelled equation (3) on input line 169.
 
 
-Package refcheck Warning: Unlabelled equation (7) on input line 208.
+Package refcheck Warning: Unlabelled equation (4) on input line 178.
 
-[5] <images/drawDirection.png, id=33, 466.74374pt x 352.31625pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./images/branchingL.png>]
+
+Package refcheck Warning: Unlabelled equation (5) on input line 182.
+
+
+Package refcheck Warning: Unlabelled equation (6) on input line 190.
+
+
+Package refcheck Warning: Unlabelled equation (7) on input line 194.
+
+[5]
+
+Package refcheck Warning: Unlabelled equation (8) on input line 210.
+
+
+Package refcheck Warning: Unlabelled equation (9) on input line 216.
+
+<images/drawDirection.png, id=33, 466.74374pt x 352.31625pt>
 File: images/drawDirection.png Graphic file (type png)
 
 <use images/drawDirection.png>
-Package pdftex.def Info: images/drawDirection.png used on input line 221.
+Package pdftex.def Info: images/drawDirection.png used on input line 229.
 (pdftex.def)             Requested size: 179.25244pt x 135.30617pt.
 
 
 Package refcheck Warning: Unused label `sub@unity.drawDirection' on input line 
-221.
+229.
 
 <images/krzyweDrzewo.png, id=34, 220.57407pt x 331.99031pt>
 File: images/krzyweDrzewo.png Graphic file (type png)
 
 <use images/krzyweDrzewo.png>
-Package pdftex.def Info: images/krzyweDrzewo.png used on input line 225.
+Package pdftex.def Info: images/krzyweDrzewo.png used on input line 233.
 (pdftex.def)             Requested size: 89.62622pt x 134.89606pt.
 
 
 Package refcheck Warning: Unused label `sub@unity.krzyweDrzewo' on input line 2
-26.
+34.
 
 <images/krzyweDrzewoMod.png, id=35, 179.16937pt x 355.3275pt>
 File: images/krzyweDrzewoMod.png Graphic file (type png)
 
 <use images/krzyweDrzewoMod.png>
-Package pdftex.def Info: images/krzyweDrzewoMod.png used on input line 230.
+Package pdftex.def Info: images/krzyweDrzewoMod.png used on input line 238.
 (pdftex.def)             Requested size: 89.62622pt x 177.75005pt.
 
 
 Package refcheck Warning: Unused label `sub@unity.krzyweDrzewoMod' on input lin
-e 231.
+e 239.
 
 <images/krzyweDrzewoSiatka2.png, id=36, 577.40718pt x 373.395pt>
 File: images/krzyweDrzewoSiatka2.png Graphic file (type png)
 
 <use images/krzyweDrzewoSiatka2.png>
-Package pdftex.def Info: images/krzyweDrzewoSiatka2.png used on input line 235.
+Package pdftex.def Info: images/krzyweDrzewoSiatka2.png used on input line 243.
 
 (pdftex.def)             Requested size: 179.25244pt x 115.91647pt.
 
 
 Package refcheck Warning: Unused label `sub@unity.krzyweDrzewoSiatka' on input 
-line 236.
+line 244.
 
 
-Overfull \hbox (2.08049pt too wide) in paragraph at lines 218--238
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 226--246
 []$[]$ $[]$
  []
 
 
-Overfull \hbox (2.08049pt too wide) in paragraph at lines 218--238
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 226--246
 []$ $[]$ 
  []
 
 
-Package refcheck Warning: Unused label `unity.direction' on input line 238.
+Package refcheck Warning: Unused label `unity.direction' on input line 246.
 
-[6 <./images/drawDirection.png> <./images/krzyweDrzewo.png> <./images/krzyweDrz
-ewoMod.png> <./images/krzyweDrzewoSiatka2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+[6] [7 <./images/drawDirection.png> <./images/krzyweDrzewo.png> <./images/krzyw
+eDrzewoMod.png> <./images/krzyweDrzewoSiatka2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
 
-Package refcheck Warning: Unlabelled equation (8) on input line 250.
+Package refcheck Warning: Unlabelled equation (10) on input line 258.
 
 
-Package refcheck Warning: Unlabelled equation (9) on input line 253.
+Package refcheck Warning: Unlabelled equation (11) on input line 261.
 
 
-Package refcheck Warning: Unlabelled equation (10) on input line 265.
+Package refcheck Warning: Unlabelled equation (12) on input line 273.
 
-<images/siatka1.png, id=42, 537.50812pt x 679.03688pt>
+<images/siatka1.png, id=46, 537.50812pt x 679.03688pt>
 File: images/siatka1.png Graphic file (type png)
 
 <use images/siatka1.png>
-Package pdftex.def Info: images/siatka1.png used on input line 276.
+Package pdftex.def Info: images/siatka1.png used on input line 284.
 (pdftex.def)             Requested size: 140.53601pt x 177.5401pt.
 
 
-Package refcheck Warning: Unused label `sub@przyklad1.siatka' on input line 277
+Package refcheck Warning: Unused label `sub@przyklad1.siatka' on input line 285
 .
 
-<images/siatkaMOD1.png, id=43, 563.85657pt x 712.16063pt>
+<images/siatkaMOD1.png, id=47, 563.85657pt x 712.16063pt>
 File: images/siatkaMOD1.png Graphic file (type png)
 
 <use images/siatkaMOD1.png>
-Package pdftex.def Info: images/siatkaMOD1.png used on input line 282.
+Package pdftex.def Info: images/siatkaMOD1.png used on input line 290.
 (pdftex.def)             Requested size: 140.53601pt x 177.49638pt.
 
 
 Package refcheck Warning: Unused label `sub@przyklad1.siatkaMOD' on input line 
-283.
+291.
 
 
-Package refcheck Warning: Unused label `przyklad1' on input line 286.
+Package refcheck Warning: Unused label `przyklad1' on input line 294.
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 293--295
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 301--303
 
  []
 
 
-Package refcheck Warning: Unlabelled equation (11) on input line 297.
+Package refcheck Warning: Unlabelled equation (13) on input line 305.
 
 
-Package refcheck Warning: Unlabelled equation (12) on input line 300.
+Package refcheck Warning: Unlabelled equation (14) on input line 308.
 
 
-Overfull \hbox (40.85204pt too wide) detected at line 300
+Overfull \hbox (40.85204pt too wide) detected at line 308
 \OML/ztmcm/m/it/10.95 X\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 l; w\OT1/ztm
 cm/m/n/10.95 ) \OMS/ztmcm/m/n/10.95 ! \OML/ztmcm/m/it/10.95 F\OT1/ztmcm/m/n/10.
 95 (\OML/ztmcm/m/it/10.95 w \OMS/ztmcm/m/n/10.95  \OML/ztmcm/m/it/10.95 l\OT1/
@@ -971,99 +981,99 @@ cm/m/n/10.95 )\OML/ztmcm/m/it/10.95 X\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.9
  []
 
 
-Package refcheck Warning: Unlabelled equation (13) on input line 312.
+Package refcheck Warning: Unlabelled equation (15) on input line 320.
 
-[8 <./images/siatka1.png> <./images/siatkaMOD1.png>]
-<images/przyklad2.png, id=51, 585.68813pt x 719.68875pt>
+[9 <./images/siatka1.png> <./images/siatkaMOD1.png>]
+<images/przyklad2.png, id=54, 585.68813pt x 719.68875pt>
 File: images/przyklad2.png Graphic file (type png)
 
 <use images/przyklad2.png>
-Package pdftex.def Info: images/przyklad2.png used on input line 318.
+Package pdftex.def Info: images/przyklad2.png used on input line 326.
 (pdftex.def)             Requested size: 140.53601pt x 172.6849pt.
 
 
-Package refcheck Warning: Unused label `sub@przyklad2.siatka' on input line 319
+Package refcheck Warning: Unused label `sub@przyklad2.siatka' on input line 327
 .
 
-<images/przyklad2MOD.png, id=52, 591.71063pt x 721.19438pt>
+<images/przyklad2MOD.png, id=55, 591.71063pt x 721.19438pt>
 File: images/przyklad2MOD.png Graphic file (type png)
 
 <use images/przyklad2MOD.png>
-Package pdftex.def Info: images/przyklad2MOD.png used on input line 323.
+Package pdftex.def Info: images/przyklad2MOD.png used on input line 331.
 (pdftex.def)             Requested size: 140.53601pt x 171.28545pt.
 
 
 Package refcheck Warning: Unused label `sub@przyklad2.siatkaMOD' on input line 
-324.
+332.
 
 
-Package refcheck Warning: Unused label `przyklad2' on input line 327.
+Package refcheck Warning: Unused label `przyklad2' on input line 335.
 
-[9 <./images/przyklad2.png> <./images/przyklad2MOD.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 332--335
+[10 <./images/przyklad2.png> <./images/przyklad2MOD.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 340--343
 
  []
 
 
-Package refcheck Warning: Unlabelled equation (14) on input line 337.
+Package refcheck Warning: Unlabelled equation (16) on input line 345.
 
 
-Package refcheck Warning: Unlabelled equation (15) on input line 344.
+Package refcheck Warning: Unlabelled equation (17) on input line 352.
 
 
-Package refcheck Warning: Unlabelled equation (16) on input line 347.
+Package refcheck Warning: Unlabelled equation (18) on input line 355.
 
 
-Package refcheck Warning: Unlabelled equation (17) on input line 359.
+Package refcheck Warning: Unlabelled equation (19) on input line 367.
 
 
-Package refcheck Warning: Unlabelled equation (18) on input line 362.
+Package refcheck Warning: Unlabelled equation (20) on input line 370.
 
-<images/przyklad3MOD.png, id=56, 784.43062pt x 715.17188pt>
+<images/przyklad3MOD.png, id=59, 784.43062pt x 715.17188pt>
 File: images/przyklad3MOD.png Graphic file (type png)
 
 <use images/przyklad3MOD.png>
-Package pdftex.def Info: images/przyklad3MOD.png used on input line 373.
+Package pdftex.def Info: images/przyklad3MOD.png used on input line 381.
 (pdftex.def)             Requested size: 140.53601pt x 128.12518pt.
 
 
-Package refcheck Warning: Unused label `sub@przyklad3.siatka' on input line 374
+Package refcheck Warning: Unused label `sub@przyklad3.siatka' on input line 382
 .
 
-<images/przyklad3.png, id=57, 779.91376pt x 713.66624pt>
+<images/przyklad3.png, id=60, 779.91376pt x 713.66624pt>
 File: images/przyklad3.png Graphic file (type png)
 
 <use images/przyklad3.png>
-Package pdftex.def Info: images/przyklad3.png used on input line 379.
+Package pdftex.def Info: images/przyklad3.png used on input line 387.
 (pdftex.def)             Requested size: 140.53601pt x 128.59593pt.
 
 
 Package refcheck Warning: Unused label `sub@przyklad3.siatkaMOD' on input line 
-380.
+388.
 
 
-Package refcheck Warning: Unused label `przyklad3' on input line 383.
+Package refcheck Warning: Unused label `przyklad3' on input line 391.
 
-[10 <./images/przyklad3MOD.png> <./images/przyklad3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
-\OT1/cmtt/m/n/10.95 http : / / dl . acm . org / citation . cfm ? id = 378503 & 
-CFID = 841465770 &
+[11 <./images/przyklad3MOD.png> <./images/przyklad3.png>]
+Underfull \hbox (badness 1158) in paragraph at lines 419--420
+\OT1/ptm/m/it/10 and frac-tional di-men-sion\OT1/ptm/m/n/10 , Sci-ence, vol. 15
+6, no. 3775, 1967, pp. 636{638.
  []
 
-[11]
+[12]
 
-Package refcheck Warning: Unused bibitem `LMat' on input line 424.
+Package refcheck Warning: Unused bibitem `LMat' on input line 427.
 
-[12] (art.aux) )
-(\end occurred when \ifdefined on line 428 was incomplete) 
+[13] (art.aux) )
+(\end occurred when \ifdefined on line 431 was incomplete) 
 Here is how much of TeX's memory you used:
- 5488 strings out of 493334
- 81228 string characters out of 3136672
- 156566 words of memory out of 3000000
- 8866 multiletter control sequences out of 15000+200000
- 56422 words of font info for 117 fonts, out of 3000000 for 9000
+ 5490 strings out of 493334
+ 81234 string characters out of 3136672
+ 156573 words of memory out of 3000000
+ 8867 multiletter control sequences out of 15000+200000
+ 57390 words of font info for 117 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,13n,43p,1151b,630s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,13n,43p,1154b,630s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
@@ -1077,9 +1087,9 @@ public/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Pr
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on art.pdf (12 pages, 1233183 bytes).
+Output written on art.pdf (13 pages, 1235825 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
+ 110 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
