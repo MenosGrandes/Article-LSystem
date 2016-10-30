@@ -31,7 +31,6 @@
 \usepackage[labelsep=period]{caption}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{refcheck}
 \captionsetup[table]{skip=7pt}
 \captionsetup[figure]{skip=6pt}
 \fancyhead{}
@@ -87,31 +86,31 @@
 
 
 \begin{abstract}
-Since the beginning of computer era we are trying to imitate nature. The results of those attempts are mathematical equations describing weather, snow flakes, plant growth or influence of species in individual biomes. In computer graphics fractal structure are often used because they can be simple characterize in mathematics. Those forms are common in nature. Self-similar fractals are created in computer graphics using Lindenmayer Systems. This article was formed to analyse efficiency of this algorithm in modelling 3D tree triangle meshes for games. The general motivation of this topic is to produce way to procedural modelling and simplified edition of complicated 3D tree models. By combining L-systems with Bezier Curve there is a possibility to produce complicated 3D models. For example tree created with 468 branches having 87200 vertices and it is made in few seconds. In conclusion, time-consuming modelling in 3D programs can be replaced by solution described in this article. 
+Since the beginning of computer era we are trying to imitate nature. The results of those attempts are mathematical equations describing weather, snow flakes, plant growth or influence of species in individual biomes. In computer graphics fractal structure are often used because they can be simple characterize in mathematics. Those forms are common in nature. Self-similar fractals are created in computer graphics using Lindenmayer Systems. This article was formed to analyse efficiency of this algorithm in modelling 3D tree triangle meshes for games. The general motivation of this topic is to produce way to procedural modelling and simplified edition of complicated 3D tree models. By combining L-systems with Bézier curve there is a possibility to produce complicated 3D models. For example tree created with 468 branches having 87200 vertices and it is made in few seconds. In conclusion, time-consuming modelling in 3D programs can be replaced by solution described in this article. 
 \end{abstract}
 
 %%% insert your contribution here
 
 \section{Introduction}
 Using 3D modelling programs to create a complex 3D mesh of tree is very time consuming, because every branch has to be shaped separately.
-To speed up and automatize this process Lindenmayer System can be used. Since 1968, when Aristid Lindenmayer created  grammatic to represent simple multicellular organism, technique has evolved. Now L-Systems are used to manage 3D models of plants\cite{Herbaceus, WebTree, Spray, wlosy, EnviroTree}, fire visualization\cite{Sim}, music\cite{MLSystem} or even neural web\cite{LBrain}. Variaty os usage, flexibility and simplicity of this technique creates a possibility to extend it. Developers over years have used this technique to create software like L-studio\cite{L-Studio}, plugins to 3DsMax to animate plant growth\cite{ABartniak} or in Houdini\cite{LHoud}. Most of the algorithms to create 3D tree mesh are generating static models, to change or move branch user must change parameters inside L-System, and the recalculate the whole model. To prevent unnecessary actions and calculation the \textit{Bézier Curve} was added as the tree skeleton. Adding possibility of changing Bézier Points along Bézier Curve, user can change every branch only by moving it's handler and recalculating only this alternated branch.
+To speed up and automatize this process Lindenmayer System can be used. Since 1968, when Aristid Lindenmayer created  grammatic to represent simple multicellular organism, technique has evolved. Now L-Systems are used to manage 3D models of plants\cite{Herbaceus, WebTree, Spray, wlosy, EnviroTree}, fire visualization\cite{Sim}, music\cite{MLSystem} or even neural web\cite{LBrain}. Variaty os usage, flexibility and simplicity of this technique creates a possibility to extend it. Developers over years have used this technique to create software like L-studio\cite{L-Studio}, plugins to 3DsMax to animate plant growth\cite{ABartniak} or in Houdini\cite{LHoud}. \par Most of the algorithms to create 3D tree mesh are generating static models, to change or move branch user must change parameters inside L-System, and recalculate whole model. To prevent unnecessary actions and calculation the \textit{Bézier curve} was added as the tree skeleton. Adding possibility of changing Bézier points along Bézier curve, user can change every branch only by moving it's handler and recalculating only this alternated branch.
 \par After long years of plants observations the conclusion was brought, every plant can be treated as a very complex fractal. The most important feature of this structure is self-similarity. In mathematics, a self-similar object is exactly or approximately similar to a part of itself (i.e. the whole has the same shape as one or more of the parts)\cite{SelfSimi}. Because of complexity of plants as fractals the simplifications must be applied. To do this the L-System can be used.
 Mentioned above technique is based on rewriting rules, so on replacing sub-terms of a formula with other terms. All formulas and terms are represented as strings, and L-system is all about changing one string to another based on rules. Every system has to have starting word, called axiom, rules of productions and number of iterations, so how many times rules must be applied to word. 
 
 \section{Procedural Systems}
 %Co ta so proceduralne systemy. Kazdy podpunkt powinien przechodzic do nastepnego plynnie.
-Creating data algorithmically, based on mathematical equations, is the core of Procedural System.  This mean that program creates content on its own, or with limited or indirect user input. In case of L-systems there are few possibilities of creating procedural content using simple or more complicated L-systems. 
+Creating data algorithmically, based on mathematical equations, is the core of procedural system.  This mean that program creates content on its own, or with limited or indirect user input. In case of L-systems there are few possibilities of creating procedural content using simple or more complicated L-systems.
 
-\subsection{OL System}
-Most basic L-System is context-free L-system, called OL-System, where there can be multiple replacement rules to any given value. In example:
+\subsection{OL-system}
+Most basic L-System is context-free L-system, called OL-system, where there can be multiple replacement rules to any given value. In example:
 \begin{equation}
-A \longrightarrow \alpha
-\end{equation} 
-\begin{equation}
+\begin{aligned}
+A \longrightarrow \alpha \\
 A \longrightarrow \beta
-\end{equation} 
+\end{aligned}
+\end{equation}
 That means that \textit{A} can be replaced with either $\alpha$ or $\beta$.\\
-When there is one and only one replacement for the same letter in word, the system is called \textit{DOL-system}, deterministic OL-system.
+\par When there is one and only one replacement for the same letter in word, the system is called \textit{DOL-system}, deterministic OL-system.
 Giving \textit{axiom}(starting word) as \textit{b}, rules : $b \rightarrow a$ and $a \rightarrow ab$ with 5 iterations simple DOL-system can be created. Example production of this system is shown at \figurename\ref{DOL}.\\
 Because L-systems was inspired by nature, usage of it can be found in there. In example  development of cyanobacteria \textit{Anabaena Catenula} can be simulated by DOL-system.
 \begin{figure}[!htp]
@@ -119,13 +118,12 @@ Because L-systems was inspired by nature, usage of it can be found in there. In 
   \includegraphics[width=0.15\linewidth]{DOL-system}
 \caption{Example of DOL system\cite{prusinABOP} \label{DOL}}
 \end{figure}
-\FloatBarrier
+
 
 \subsection{Turtle interpretation of string}
-L-System algorithm generates characters, so it must be evaluated to create graphical content from it. Created word contains steering, drawing and omitted characters, they are represented at \figurename\ref{tab}. The steering characters are the one which controls the behaviour of turtle. Drawn are those which simply adding a line between points.
-\textit{Turtle graphics} is term where turtle have it's position, angle which describes the direction in which it is facing and any other parameters that user will use, but position and angle are mandatory.
+L-systems are operating on symbols, so it's mean that it will always creates list of characters. Every symbol in created word can be classified as \textit{steering character}, in example in Table\ref{steeringTab}.
 \begin{table}[!ht]
-\caption{Steering characters}\label{tab}
+\caption{Steering characters}\label{steeringTab}
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -145,7 +143,8 @@ L-System algorithm generates characters, so it must be evaluated to create graph
 \end{tabular}
 \end{table}
 
-As it can be seen in the last column in \figurename\ref{tab} the steering character to draw line between points can be represented by multiple upper cases letters. User can change behaviour of L-system by manipulating those characters. Can be defined which one are representing draw line and which are just to create randomness of given L-system.
+ To create graphical content from it those characters must be parsed to specific action on \textit{turtle}. \textit{Turtle graphics} is term where turtle have it's position, angle which describes the direction in which it is facing and any other parameters that user will use, but position and angle are mandatory. When changing turtle behaviour, so parsing specific character, the different graphical content can be applied. 
+\par As it can be seen in the last column in Table\ref{steeringTab} the steering character to draw line between points can be represented by multiple upper cases letters. User can change behaviour of turtle by manipulating those characters. Can be defined which one are representing draw line and which are just to create randomness of given L-system.
 
 
 
@@ -162,37 +161,57 @@ OL-systems always create one long continued line. To add branching like behaviou
 
 
 \subsection{Parametric L-system}
-To create more complicated models the parametric L-system was developed. Thanks to parameters L-system can change the values of variables, in example the steering angle of branch. When in DOL-System the sign \textit{+} was strictly assigned to hard-coded value, in this approach the value can be changed in every iteration using \textit{+(r)} where \textit{r} is some kind of parameter. Every letter or string must have brackets immediately behind it and within them there can be multiple parameters, separated with comma,also mathematical expressions can be applied between parameters. Example:
+To create more complicated models the parametric L-system was developed. Thanks to parameters L-system can change the values of variables, in example the steering angle of branch. When in OL-system the sign \textit{+} was strictly assigned to hard-coded value, in this approach the value can be changed in every iteration using \textit{+(r)} where \textit{r} is some kind of parameter. Every letter or string must have brackets immediately behind it and within them there can be multiple parameters, separated with comma, also mathematical expressions can be applied between parameters. Example:
 \begin{equation}\label{paramEx}
 C(x\cdot e,e\backslash 2,a+c,b-d,g)
 \end{equation}
-
+As can be seen in Equation~\ref{paramEx} the operands between parameters can be every mathematical operand that can be applied between two floating point numbers.
 \section{Bézier curves}
 %wprowadzic co to jest krzywa Beziera, dlaczego tego uzywam i po co. Zeby nie bylo z dupy. Dopisac do kazdego co jest co.
 Combining all mentioned above L-systems user can create model of plan, but without any possibility to change it without recalculating whole system. To add this feature in this work the Bézier curves was added. It will create whole skeleton of tree, and then based on it the mesh will be created.
 
-Bézier Curve is parametric curve
-A B-spline is a generalization of the Bézier curve \cite{BSpline}. Let a vector known as the knot vector be defined 
+Bézier curve is parametric curve, that can be generated under the control of other points. Approximate tangents by using control points are used to generate curve. The Bézier curve can be represented mathematically as
 \begin{equation}
-T={t_0,t_1,\ldots,t_m},
+\sum\limits_{k=0}^n P_i B_{i}^{n}(t)
 \end{equation}
-where \textbf{T} is a nondecreasing sequence with $t_i\in[0,1]$ and define control points \textbf{$P_0,P_1,\ldots,P_n$}. Define the degree as
+Where $P_i$ is the set of points and $B_{i}^{n}(t)$ represents the Bernstein polynomials which are given by 
 \begin{equation}
-p\equiv m-n-1
+B_{i}^{n}(t)=\binom{n}{i}(1-t)^{n-i}t^{i}
 \end{equation}
-The "knots" $t_{p+1},\ldots,t_{m-p-1}$ are called internal knots.
-
-
-\begin{equation} N_{i}^{j}(t)\;
+Where \textbf{n} is the polynomial degree, \textbf{i} is the index, and \textbf{t} is the variable.
+\newline
+A B-spline curve is defined as a linear combination of control points $P_i$ and B-spline basis function $N_i	 k (t)$ given by
+  \begin{equation}
+  C(t)=\sum\limits_{i=0}^n P_i N_{i}^{k}(t)\quad n>=k-1, \quad t \in [tk-1,tn+1]
+  \end{equation}
+where
+\begin{itemize}
+\item \begin{equation}\label{conPoi}
+P_i={t_0,t_1,\ldots,n},
+\end{equation}
+$P_i$ describes the control points.
+\item $k$ is the order of the polynomial segments of the B-spline curve. Order ${k}$ means that the curve is made up of piecewise polynomial segments of degree $k - 1$.
+\item The $Ni,k(t)$ are the “normalized B-spline blending functions”. They are described by the order k and by a non-decreasing sequence of real numbers normally called the “knot sequence”.
+\begin{equation}
+t_i:i={0,\ldots n+K}
+\end{equation}
+\end{itemize}
+$N_i, k$ functions are described as 
+\begin{equation} N_{i}^{1}(t)\;
 \begin{cases} 1\qquad \;if \, t_i\leq t< t_{i+1}\:and\: t_i<t_{i+1} \\ 
-0 \qquad   N_{i}^{j}(t)=\frac{t-t_i}{t_{i+j}-t_i} N_{i}^{j-1}(t) + \frac{t_{i+j+1} - t}{t_{i+j+1} - t_{i+1}} N_{i+1}^{n-1}(t)
+0 \qquad   Otherwise
  \end{cases}
   \end{equation}
-  where $j=1,2,\ldots,p$. Then the curve is defined by
-  \begin{equation}
-  C(t)=\sum\limits_{i=0}^n P_i N_{i}^{p}(t)
-  \end{equation}
-
+  
+  if $k > 1$
+   \begin{equation}
+  N_{i}^{k}(t)=\frac{t-t_i}{t_{i+k-1}} N_{i}^{k-1}(t) + \frac{t_{i+k} - t}{t_{i+k} - t_{i+1}} N_{i+1}^{k-1}(t)
+ \end{equation}
+ also
+    \begin{equation}
+    t\in[t_{k-1},t_{n+1})	
+ \end{equation}
+\iffalse
 \section{Methods}
 Unity Engine is Game Engine where developer can write application in C\# using Mono. L-System was implemented with couple of simple structures. This is description of those:
 \begin{itemize}[labelindent=5.5em,labelsep=1cm,leftmargin=*]
@@ -403,7 +422,7 @@ To evaluate all string into float values the simple parser have been created.
 Parser created with this implementation is simple, but creating possibility to evaluate more than 3 parameters, and operations between them, using approaches from this implementation would be very difficult. To ensure that every parameter would be evaluated properly whole implementation will be rewritten into new \textit{Boost Spirit X3} C++ library, and created as \textit{Dynamic-Link Library}. Unity,Unreal Engine and others game engines have ability to write plugins based on \textit{DLL} written in \textbf{C++}, so every engine could have their own implementation of this algorithm.
 % use section* for acknowledgement
 
-
+\fi
 %Jeszcze raz sprawdz bibliografie
 \begin{thebibliography}{99}
 \small

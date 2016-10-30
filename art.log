@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  29 OCT 2016 16:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  30 OCT 2016 09:04
 entering extended mode
 **./art.tex
 (art.tex
@@ -610,26 +610,23 @@ Package tocloft Info: The document has section divisions on input line 44.
 \cftbeforetabskip=\skip84
 \cfttabindent=\skip85
 \cfttabnumwidth=\skip86
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\refcheck\refcheck.sty"
-Package: refcheck 2013/02/14 v1.9.1
-\btoks=\toks26
 ) (art.aux)
 \openout1 = `art.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 65.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -674,12 +671,12 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \scratchbox=\box31
 \nofMPsegments=\count129
 \nofMParguments=\count130
-\everyMPshowfont=\toks27
+\everyMPshowfont=\toks26
 \MPscratchCnt=\count131
 \MPscratchDim=\dimen131
 \MPnumerator=\count132
 \makeMPintoPDFobject=\count133
-\everyMPtoPDFconversion=\toks28
+\everyMPtoPDFconversion=\toks27
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -724,372 +721,136 @@ G,.JBIG2,.JB2,.eps]
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \celsius on input line 66.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 66.
+LaTeX Info: Redefining \celsius on input line 65.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 65.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 66.
-Package gensymb Info: Using \upOmega for \ohm on input line 66.
+LaTeX Info: Redefining \ohm on input line 65.
+Package gensymb Info: Using \upOmega for \ohm on input line 65.
 
 Package gensymb Warning: Not defining \micro.
 
-Package: `refcheck' v1.9.1 <2013/02/14>
-options: showrefs, showcites, msgs, chckunlbld
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 82
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 81
 .
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ztmcm.fd"
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 82
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 81
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlztmcm.fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 82
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 81
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsztmcm.fd"
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 82
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 81
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxztmcm.fd"
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 82.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 82.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 82.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 82.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 82.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 82.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 82--82
+Overfull \hbox (12.0pt too wide) in paragraph at lines 81--81
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 95.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 94.
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 106.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 106.
 
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
 
-Package refcheck Warning: Unlabelled equation (1) on input line 109.
-
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 109.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
-
-
-Package refcheck Warning: Unlabelled equation (2) on input line 112.
+ []
 
 <images/DOL-system.png, id=9, 124.21407pt x 195.73125pt>
 File: images/DOL-system.png Graphic file (type png)
 
 <use images/DOL-system.png>
-Package pdftex.def Info: images/DOL-system.png used on input line 119.
+Package pdftex.def Info: images/DOL-system.png used on input line 118.
 (pdftex.def)             Requested size: 53.77354pt x 84.73323pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 120.
- [2]
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 138.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 136.
 
-<images/branchingL.png, id=16, 718.93594pt x 544.28343pt>
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 136.
+ [2]
+<images/branchingL.png, id=15, 718.93594pt x 544.28343pt>
 File: images/branchingL.png Graphic file (type png)
 
 <use images/branchingL.png>
-Package pdftex.def Info: images/branchingL.png used on input line 156.
+Package pdftex.def Info: images/branchingL.png used on input line 155.
 (pdftex.def)             Requested size: 250.95233pt x 189.98714pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5460) has occurred while \output is active []
 
  [3 <./images/DOL-system.png>]
-
-Package refcheck Warning: Unlabelled equation (3) on input line 169.
-
-
-Package refcheck Warning: Unlabelled equation (4) on input line 178.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./images/branchingL.png>]
-
-Package refcheck Warning: Unlabelled equation (5) on input line 182.
-
-
-Package refcheck Warning: Unlabelled equation (6) on input line 190.
-
-
-Package refcheck Warning: Unlabelled equation (7) on input line 194.
-
-[5]
-
-Package refcheck Warning: Unlabelled equation (8) on input line 210.
-
-
-Package refcheck Warning: Unlabelled equation (9) on input line 216.
-
-<images/drawDirection.png, id=33, 466.74374pt x 352.31625pt>
-File: images/drawDirection.png Graphic file (type png)
-
-<use images/drawDirection.png>
-Package pdftex.def Info: images/drawDirection.png used on input line 229.
-(pdftex.def)             Requested size: 179.25244pt x 135.30617pt.
-
-
-Package refcheck Warning: Unused label `sub@unity.drawDirection' on input line 
-229.
-
-<images/krzyweDrzewo.png, id=34, 220.57407pt x 331.99031pt>
-File: images/krzyweDrzewo.png Graphic file (type png)
-
-<use images/krzyweDrzewo.png>
-Package pdftex.def Info: images/krzyweDrzewo.png used on input line 233.
-(pdftex.def)             Requested size: 89.62622pt x 134.89606pt.
-
-
-Package refcheck Warning: Unused label `sub@unity.krzyweDrzewo' on input line 2
-34.
-
-<images/krzyweDrzewoMod.png, id=35, 179.16937pt x 355.3275pt>
-File: images/krzyweDrzewoMod.png Graphic file (type png)
-
-<use images/krzyweDrzewoMod.png>
-Package pdftex.def Info: images/krzyweDrzewoMod.png used on input line 238.
-(pdftex.def)             Requested size: 89.62622pt x 177.75005pt.
-
-
-Package refcheck Warning: Unused label `sub@unity.krzyweDrzewoMod' on input lin
-e 239.
-
-<images/krzyweDrzewoSiatka2.png, id=36, 577.40718pt x 373.395pt>
-File: images/krzyweDrzewoSiatka2.png Graphic file (type png)
-
-<use images/krzyweDrzewoSiatka2.png>
-Package pdftex.def Info: images/krzyweDrzewoSiatka2.png used on input line 243.
-
-(pdftex.def)             Requested size: 179.25244pt x 115.91647pt.
-
-
-Package refcheck Warning: Unused label `sub@unity.krzyweDrzewoSiatka' on input 
-line 244.
-
-
-Overfull \hbox (2.08049pt too wide) in paragraph at lines 226--246
-[]$[]$ $[]$
+Overfull \hbox (5.89597pt too wide) in paragraph at lines 164--165
+\OT1/ptm/m/n/10.95 To cre-ate more com-pli-cated mod-els the para-met-ric L-sys
+tem was de-vel-oped. Thanks
  []
 
-
-Overfull \hbox (2.08049pt too wide) in paragraph at lines 226--246
-[]$ $[]$ 
- []
-
-
-Package refcheck Warning: Unused label `unity.direction' on input line 246.
-
-[6] [7 <./images/drawDirection.png> <./images/krzyweDrzewo.png> <./images/krzyw
-eDrzewoMod.png> <./images/krzyweDrzewoSiatka2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
-
- []
-
-
-Package refcheck Warning: Unlabelled equation (10) on input line 258.
-
-
-Package refcheck Warning: Unlabelled equation (11) on input line 261.
-
-
-Package refcheck Warning: Unlabelled equation (12) on input line 273.
-
-<images/siatka1.png, id=46, 537.50812pt x 679.03688pt>
-File: images/siatka1.png Graphic file (type png)
-
-<use images/siatka1.png>
-Package pdftex.def Info: images/siatka1.png used on input line 284.
-(pdftex.def)             Requested size: 140.53601pt x 177.5401pt.
-
-
-Package refcheck Warning: Unused label `sub@przyklad1.siatka' on input line 285
-.
-
-<images/siatkaMOD1.png, id=47, 563.85657pt x 712.16063pt>
-File: images/siatkaMOD1.png Graphic file (type png)
-
-<use images/siatkaMOD1.png>
-Package pdftex.def Info: images/siatkaMOD1.png used on input line 290.
-(pdftex.def)             Requested size: 140.53601pt x 177.49638pt.
-
-
-Package refcheck Warning: Unused label `sub@przyklad1.siatkaMOD' on input line 
-291.
-
-
-Package refcheck Warning: Unused label `przyklad1' on input line 294.
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 301--303
-
- []
-
-
-Package refcheck Warning: Unlabelled equation (13) on input line 305.
-
-
-Package refcheck Warning: Unlabelled equation (14) on input line 308.
-
-
-Overfull \hbox (40.85204pt too wide) detected at line 308
-\OML/ztmcm/m/it/10.95 X\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 l; w\OT1/ztm
-cm/m/n/10.95 ) \OMS/ztmcm/m/n/10.95 ! \OML/ztmcm/m/it/10.95 F\OT1/ztmcm/m/n/10.
-95 (\OML/ztmcm/m/it/10.95 w \OMS/ztmcm/m/n/10.95  \OML/ztmcm/m/it/10.95 l\OT1/
-ztmcm/m/n/10.95 )[\OML/ztmcm/m/it/10.95 =\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/
-10.95 r \OMS/ztmcm/m/n/10.95  \OML/ztmcm/m/it/10.95 l\OT1/ztmcm/m/n/10.95 )\OM
-L/ztmcm/m/it/10.95 X\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 l; w\OT1/ztmcm/
-m/n/10.95 ) \OMS/ztmcm/m/n/10.95   \OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 
-r\OT1/ztmcm/m/n/10.95 )\OML/ztmcm/m/it/10.95 X\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/
-m/it/10.95 w; w\OT1/ztmcm/m/n/10.95 )] + (\OML/ztmcm/m/it/10.95 r\OT1/ztmcm/m/n
-/10.95 )\OML/ztmcm/m/it/10.95 F\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 l\OT
-1/ztmcm/m/n/10.95 )[\OMS/ztmcm/m/n/10.95 n\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it
-/10.95 l\OT1/ztmcm/m/n/10.95 )\OML/ztmcm/m/it/10.95 X\OT1/ztmcm/m/n/10.95 (\OML
-/ztmcm/m/it/10.95 l; w\OT1/ztmcm/m/n/10.95 ) + (\OML/ztmcm/m/it/10.95 r\OT1/ztm
-cm/m/n/10.95 )\OML/ztmcm/m/it/10.95 X\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.9
-5 l; w\OT1/ztmcm/m/n/10.95 )] \OMS/ztmcm/m/n/10.95   \OT1/ztmcm/m/n/10.95 (\OML
-/ztmcm/m/it/10.95 r\OT1/ztmcm/m/n/10.95 )\OML/ztmcm/m/it/10.95 F\OT1/ztmcm/m/n/
-10.95 (\OML/ztmcm/m/it/10.95 w\OT1/ztmcm/m/n/10.95 )
- []
-
-
-Package refcheck Warning: Unlabelled equation (15) on input line 320.
-
-[9 <./images/siatka1.png> <./images/siatkaMOD1.png>]
-<images/przyklad2.png, id=54, 585.68813pt x 719.68875pt>
-File: images/przyklad2.png Graphic file (type png)
-
-<use images/przyklad2.png>
-Package pdftex.def Info: images/przyklad2.png used on input line 326.
-(pdftex.def)             Requested size: 140.53601pt x 172.6849pt.
-
-
-Package refcheck Warning: Unused label `sub@przyklad2.siatka' on input line 327
-.
-
-<images/przyklad2MOD.png, id=55, 591.71063pt x 721.19438pt>
-File: images/przyklad2MOD.png Graphic file (type png)
-
-<use images/przyklad2MOD.png>
-Package pdftex.def Info: images/przyklad2MOD.png used on input line 331.
-(pdftex.def)             Requested size: 140.53601pt x 171.28545pt.
-
-
-Package refcheck Warning: Unused label `sub@przyklad2.siatkaMOD' on input line 
-332.
-
-
-Package refcheck Warning: Unused label `przyklad2' on input line 335.
-
-[10 <./images/przyklad2.png> <./images/przyklad2MOD.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 340--343
-
- []
-
-
-Package refcheck Warning: Unlabelled equation (16) on input line 345.
-
-
-Package refcheck Warning: Unlabelled equation (17) on input line 352.
-
-
-Package refcheck Warning: Unlabelled equation (18) on input line 355.
-
-
-Package refcheck Warning: Unlabelled equation (19) on input line 367.
-
-
-Package refcheck Warning: Unlabelled equation (20) on input line 370.
-
-<images/przyklad3MOD.png, id=59, 784.43062pt x 715.17188pt>
-File: images/przyklad3MOD.png Graphic file (type png)
-
-<use images/przyklad3MOD.png>
-Package pdftex.def Info: images/przyklad3MOD.png used on input line 381.
-(pdftex.def)             Requested size: 140.53601pt x 128.12518pt.
-
-
-Package refcheck Warning: Unused label `sub@przyklad3.siatka' on input line 382
-.
-
-<images/przyklad3.png, id=60, 779.91376pt x 713.66624pt>
-File: images/przyklad3.png Graphic file (type png)
-
-<use images/przyklad3.png>
-Package pdftex.def Info: images/przyklad3.png used on input line 387.
-(pdftex.def)             Requested size: 140.53601pt x 128.59593pt.
-
-
-Package refcheck Warning: Unused label `sub@przyklad3.siatkaMOD' on input line 
-388.
-
-
-Package refcheck Warning: Unused label `przyklad3' on input line 391.
-
-[11 <./images/przyklad3MOD.png> <./images/przyklad3.png>]
-Underfull \hbox (badness 1158) in paragraph at lines 419--420
+[4 <./images/branchingL.png>] [5]
+Underfull \hbox (badness 1158) in paragraph at lines 438--439
 \OT1/ptm/m/it/10 and frac-tional di-men-sion\OT1/ptm/m/n/10 , Sci-ence, vol. 15
 6, no. 3775, 1967, pp. 636{638.
  []
 
-[12]
 
-Package refcheck Warning: Unused bibitem `LMat' on input line 427.
+Package caption Warning: Unused \captionsetup[sub] on input line 34.
+See the caption package documentation for explanation.
 
-[13] (art.aux) )
-(\end occurred when \ifdefined on line 431 was incomplete) 
+[6] (art.aux) )
+(\end occurred when \ifdefined on line 450 was incomplete) 
 Here is how much of TeX's memory you used:
- 5490 strings out of 493334
- 81234 string characters out of 3136672
- 156573 words of memory out of 3000000
- 8867 multiletter control sequences out of 15000+200000
- 57390 words of font info for 117 fonts, out of 3000000 for 9000
+ 5230 strings out of 493334
+ 76695 string characters out of 3136672
+ 155732 words of memory out of 3000000
+ 8635 multiletter control sequences out of 15000+200000
+ 47242 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,13n,43p,1154b,630s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,13n,43p,1151b,569s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
-/symbol/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/symbol/usyr
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on art.pdf (13 pages, 1235825 bytes).
+ype1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/urw/symbol/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/symbo
+l/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on art.pdf (6 pages, 246282 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 66 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
