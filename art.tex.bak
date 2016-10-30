@@ -213,37 +213,35 @@ $N_i, k$ functions are described as
  \end{equation}
 
 \section{Methods}
-Unity Engine is Game Engine where developer can write application in C\# using Mono. L-System was implemented with couple of simple structures. This is description of those:
+To implement program, from which screenshot will be presented ,all mentioned above methods was used. Implementation was write in Unity Engine version of C\# called Mono. To do this those custom classes was used:
 \begin{itemize}[labelindent=5.5em,labelsep=1cm,leftmargin=*]
 \item [LType] description of parameter, its definition as float and name of object
 \item [LFunction] definition of production and collection of parameters used in this production
 \item [LObject] object of L-System
 \item [PosRot] quaternion and position
 \end{itemize}
-Every \textit{LObject} have list of \textit{LFunction} and Dictionary \textit{LType}, where \textit{Key} is string name and \textit{Value} is float.
+Every \textit{LObject} have list of \textit{LFunction} and Dictionary of \textit{LType}, where \textit{Key} is string name and \textit{Value} is float.
 Class where are all methods that calculates L-System productions is \textit{Interpreter}, where there are 2  functions \textit{CreateTreeString and} \textit{CreateBezierTree(LObject currentObject)}. First create word from rules and second creates tree skeleton based on this word. \par
-Word is created by replacing one string by another using rules corresponded to LObject. Because in this implementation only Parametric L-System is used, all parameters must be evaluated in every iteration. There are two main cases. When parameters inside bracket have mathematical expression, and when they don't. Second event is simpler to evaluate because algorithm have to find corresponded value to string representation in Dictionary, and than change it for float value. It's performed only at the beginning of algorithm, and with every function. Thanks to this, algorithm does not need to change every parameter in every iteration, it's done only once.
-%Skrocic to i napisac ze to przykladowe.
-\begin{equation} 
+Word is created by replacing one string by another using rules corresponded to LObject. Because in this implementation only Parametric L-system is used, all parameters must be evaluated in every iteration. There are two main cases to do this. When parameters inside bracket have mathematical expression, and when they don't. Second event is simpler to evaluate because algorithm have to find corresponded value to string representation in Dictionary, and than change it for float value. It's performed only at the beginning of algorithm, and with every function. Thanks to this, algorithm does not need to change every parameter in every iteration, it's done only once.
+In example Equation~\ref{eq:staticEv}
+\begin{equation} \label{eq:staticEv}
 !(vr)F(50)[ \&(a)F(50)A]/(d2) \quad\longrightarrow\quad !(2.13)F(50)[ \&(0.45)F(50)A]/(11.3)
  \end{equation}
-
-  Parameters that have mathematical expression between them have another approach to evaluate them. At first parameters have to be changed to float values then expression must be specified and the last step is to interpret, calculate value as float and then return it as string value.
+\newpage
+Parameters that have mathematical expression between them have another approach to evaluate them. At first parameters have to be changed to float values then expression must be specified and the last step is to interpret, calculate value as float and then return it as string value.
   %wyjasnic co to jest F(l) i inne literki.
-  \begin{equation}
+  \begin{equation}\label{eq:dynaEv}
   F(l) \rightarrow F(l \cdot lr)
   \end{equation}
-  In this example the \textit{l} and \textit{lr} parameters will have to be found in Dictionary, then the $ \cdot$ must be interpreted as multiplication sign, and the last step is to return result as string representation of float, so if \textit{l = 6} and \textit{lr = 0.32} the result of this rule would be \textit{F(1.92)}.\par
+  In this example at Equation~\ref{eq:dynaEv} the rule $F(l)$ must be found in list of production of current \textit{LObject}, \textit{l} and \textit{lr} parameters will have to be found in Dictionary of parameters, $ \cdot$ sign must be interpreted as multiplication sign, and the last step is to return result as string representation of float, so if \textit{l = 6} and \textit{lr = 0.32} the result of this rule would be \textit{F(1.92)}.\par
 Second part of algorithm is to generate tree skeleton, based on created before word. String may consist of several thousand characters, so analysing it is the most time consuming part of this algorithm.
-Every Bézier Curve has it's parameters such as \textit{normal, bi normal and tangent vector}, corresponded to \textit{X,Y and Z position}. Every branch is separate Bézier Curve, which consist of Bézier Points. Those structures can be moved, deleted or added. That operations are based on steering characters in the word.
-Visualisation of those parameters are at \figurename\ref{unity.drawDirection}. Tree skeleton created based on word is at \figurename\ref{unity.krzyweDrzewo}, after modification  \figurename\ref{unity.krzyweDrzewoMod}. \figurename\ref{unity.krzyweDrzewoSiatka} present created mesh placed on points of skeleton.
-\par
-Last step is to generate  mesh based on points of skeleton. Every point on Bézier Curve is center of one 3D cylindrical mesh. Normal, binormal and tangend are used in this part to calculate properly bending angles.
+Every Bézier Curve has it's parameters such as \textit{normal, bi normal and tangent vector}, corresponded to \textit{X,Y and Z position}. Every branch is separate Bézier Curve, which consist of Bézier Points. Those structures can be moved, deleted or added. That operations are based on steering characters in the word.	
+Last step is to generate  mesh based on points of skeleton. Every point on Bézier curve is center of one 3D cylindrical mesh. Normal, binormal and tangend are used in this part to calculate properly bending angles.
 All calculation are based on Quaternions rotations, to ensure appropriate angles, and because that how the Unity is handling the angles.
 \begin{figure}[!htp]
 \centering
   \includegraphics[width=1\linewidth]{diagram2}
-\caption{Example of Bracket L-system\cite{prusinABOP} \label{diagram}}
+\caption{Flow chart of this algorithm \label{diagram}}
 \end{figure}
 
 
@@ -292,7 +290,7 @@ X(1)
 \end{center}
 Number of iterations:
 \begin{center}
-5
+4
 \end{center}
 Variables:
 \begin{equation}
@@ -300,7 +298,6 @@ r\rightarrow 25
 \end{equation}
 
 
-%tutaj dorobic diagram przejsc. I jakos zedytowac te rysunki
 \FloatBarrier
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \begin{figure}[!htp]

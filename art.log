@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  30 OCT 2016 12:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  30 OCT 2016 16:42
 entering extended mode
 **./art.tex
 (art.tex
@@ -818,53 +818,37 @@ tem was de-vel-oped. Thanks
  []
 
 [4 <./images/branchingL.png>] [5] [6]
-
-LaTeX Warning: Reference `unity.drawDirection' on page 7 undefined on input lin
-e 239.
-
-
-LaTeX Warning: Reference `unity.krzyweDrzewo' on page 7 undefined on input line
- 239.
-
-
-LaTeX Warning: Reference `unity.krzyweDrzewoMod' on page 7 undefined on input l
-ine 239.
-
-
-LaTeX Warning: Reference `unity.krzyweDrzewoSiatka' on page 7 undefined on inpu
-t line 239.
-
 <images/diagram2.png, id=34, 676.5275pt x 360.34625pt>
 File: images/diagram2.png Graphic file (type png)
 
 <use images/diagram2.png>
-Package pdftex.def Info: images/diagram2.png used on input line 245.
+Package pdftex.def Info: images/diagram2.png used on input line 243.
 (pdftex.def)             Requested size: 358.5049pt x 190.9606pt.
  [7 <./images/diagram2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
 
  []
 
-<images/siatka1.png, id=41, 537.50812pt x 679.03688pt>
+<images/siatka1.png, id=41, 717.43031pt x 705.38531pt>
 File: images/siatka1.png Graphic file (type png)
 
 <use images/siatka1.png>
-Package pdftex.def Info: images/siatka1.png used on input line 311.
-(pdftex.def)             Requested size: 140.53601pt x 177.5401pt.
+Package pdftex.def Info: images/siatka1.png used on input line 308.
+(pdftex.def)             Requested size: 140.53601pt x 138.16847pt.
 
-<images/siatkaMOD1.png, id=42, 563.85657pt x 712.16063pt>
+<images/siatkaMOD1.png, id=42, 721.94719pt x 718.93594pt>
 File: images/siatkaMOD1.png Graphic file (type png)
 
 <use images/siatkaMOD1.png>
-Package pdftex.def Info: images/siatkaMOD1.png used on input line 317.
-(pdftex.def)             Requested size: 140.53601pt x 177.49638pt.
+Package pdftex.def Info: images/siatkaMOD1.png used on input line 314.
+(pdftex.def)             Requested size: 140.53601pt x 139.94511pt.
  [8]
-Underfull \hbox (badness 10000) in paragraph at lines 328--330
+Underfull \hbox (badness 10000) in paragraph at lines 325--327
 
  []
 
 
-Overfull \hbox (40.85204pt too wide) detected at line 335
+Overfull \hbox (40.85204pt too wide) detected at line 332
 \OML/ztmcm/m/it/10.95 X\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 l; w\OT1/ztm
 cm/m/n/10.95 ) \OMS/ztmcm/m/n/10.95 ! \OML/ztmcm/m/it/10.95 F\OT1/ztmcm/m/n/10.
 95 (\OML/ztmcm/m/it/10.95 w \OMS/ztmcm/m/n/10.95  \OML/ztmcm/m/it/10.95 l\OT1/
@@ -884,55 +868,51 @@ cm/m/n/10.95 )\OML/ztmcm/m/it/10.95 X\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.9
 10.95 (\OML/ztmcm/m/it/10.95 w\OT1/ztmcm/m/n/10.95 )
  []
 
-[9 <./images/siatka1.png> <./images/siatkaMOD1.png>]
-<images/przyklad2.png, id=49, 585.68813pt x 719.68875pt>
+<images/przyklad2.png, id=46, 585.68813pt x 719.68875pt>
 File: images/przyklad2.png Graphic file (type png)
 
 <use images/przyklad2.png>
-Package pdftex.def Info: images/przyklad2.png used on input line 353.
+Package pdftex.def Info: images/przyklad2.png used on input line 350.
 (pdftex.def)             Requested size: 140.53601pt x 172.6849pt.
 
-<images/przyklad2MOD.png, id=50, 591.71063pt x 721.19438pt>
+<images/przyklad2MOD.png, id=47, 591.71063pt x 721.19438pt>
 File: images/przyklad2MOD.png Graphic file (type png)
 
 <use images/przyklad2MOD.png>
-Package pdftex.def Info: images/przyklad2MOD.png used on input line 358.
+Package pdftex.def Info: images/przyklad2MOD.png used on input line 355.
 (pdftex.def)             Requested size: 140.53601pt x 171.28545pt.
- [10 <./images/przyklad2.png> <./images/przyklad2MOD.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 367--370
+ [9 <./images/siatka1.png> <./images/siatkaMOD1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 364--367
 
  []
 
-<images/przyklad3MOD.png, id=54, 784.43062pt x 715.17188pt>
+<images/przyklad3MOD.png, id=53, 784.43062pt x 715.17188pt>
 File: images/przyklad3MOD.png Graphic file (type png)
 
 <use images/przyklad3MOD.png>
-Package pdftex.def Info: images/przyklad3MOD.png used on input line 408.
+Package pdftex.def Info: images/przyklad3MOD.png used on input line 405.
 (pdftex.def)             Requested size: 140.53601pt x 128.12518pt.
 
-<images/przyklad3.png, id=55, 779.91376pt x 713.66624pt>
+<images/przyklad3.png, id=54, 779.91376pt x 713.66624pt>
 File: images/przyklad3.png Graphic file (type png)
 
 <use images/przyklad3.png>
-Package pdftex.def Info: images/przyklad3.png used on input line 414.
+Package pdftex.def Info: images/przyklad3.png used on input line 411.
 (pdftex.def)             Requested size: 140.53601pt x 128.59593pt.
- [11 <./images/przyklad3MOD.png> <./images/przyklad3.png>]
-Underfull \hbox (badness 1158) in paragraph at lines 445--446
+ [10 <./images/przyklad2.png> <./images/przyklad2MOD.png>] [11 <./images/przykl
+ad3MOD.png> <./images/przyklad3.png>]
+Underfull \hbox (badness 1158) in paragraph at lines 442--443
 \OT1/ptm/m/it/10 and frac-tional di-men-sion\OT1/ptm/m/n/10 , Sci-ence, vol. 15
 6, no. 3775, 1967, pp. 636{638.
  []
 
-[12] [13] (art.aux)
-
-LaTeX Warning: There were undefined references.
-
- )
-(\end occurred when \ifdefined on line 457 was incomplete) 
+[12] [13] (art.aux) )
+(\end occurred when \ifdefined on line 454 was incomplete) 
 Here is how much of TeX's memory you used:
- 5295 strings out of 493334
- 78177 string characters out of 3136672
- 155876 words of memory out of 3000000
- 8693 multiletter control sequences out of 15000+200000
+ 5293 strings out of 493334
+ 78111 string characters out of 3136672
+ 155894 words of memory out of 3000000
+ 8691 multiletter control sequences out of 15000+200000
  47242 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,13n,43p,1151b,569s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -947,9 +927,9 @@ e1/urw/symbol/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/symbo
 l/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on art.pdf (13 pages, 1087714 bytes).
+Output written on art.pdf (13 pages, 825739 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
+ 101 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
