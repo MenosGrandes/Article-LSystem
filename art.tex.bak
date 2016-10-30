@@ -93,16 +93,16 @@ Since the beginning of computer era we are trying to imitate nature. The results
 
 \section{Introduction}
 Using 3D modelling programs to create a complex 3D mesh of tree is very time consuming, because every branch has to be shaped separately.
-To speed up and automatize this process Lindenmayer System can be used. Since 1968, when Aristid Lindenmayer created  grammatic to represent simple multicellular organism, technique has evolved. Now L-Systems are used to manage 3D models of plants\cite{Herbaceus, WebTree, Spray, wlosy, EnviroTree}, fire visualization\cite{Sim}, music\cite{MLSystem} or even neural web\cite{LBrain}. Variaty os usage, flexibility and simplicity of this technique creates a possibility to extend it. Developers over years have used this technique to create software like L-studio\cite{L-Studio}, plugins to 3DsMax to animate plant growth\cite{ABartniak} or in Houdini\cite{LHoud}. \par Most of the algorithms to create 3D tree mesh are generating static models, to change or move branch user must change parameters inside L-System, and recalculate whole model. To prevent unnecessary actions and calculation the \textit{Bézier curve} was added as the tree skeleton. Adding possibility of changing Bézier points along Bézier curve, user can change every branch only by moving it's handler and recalculating only this alternated branch.
-\par After long years of plants observations the conclusion was brought, every plant can be treated as a very complex fractal. The most important feature of this structure is self-similarity. In mathematics, a self-similar object is exactly or approximately similar to a part of itself (i.e. the whole has the same shape as one or more of the parts)\cite{SelfSimi}. Because of complexity of plants as fractals the simplifications must be applied. To do this the L-System can be used.
+To speed up and automatize this process Lindenmayer System can be used. Since 1968, when Aristid Lindenmayer created  grammatic to represent simple multicellular organism, technique has evolved. Now L-systems are used to manage 3D models of plants\cite{Herbaceus, WebTree, Spray, wlosy, EnviroTree}, fire visualization\cite{Sim}, music\cite{MLSystem} or even neural web\cite{LBrain}. Variaty os usage, flexibility and simplicity of this technique creates a possibility to extend it. Developers over years have used this technique to create software like L-studio\cite{L-Studio}, plugins to 3DsMax to animate plant growth\cite{ABartniak} or in Houdini\cite{LHoud}. \par Most of the algorithms to create 3D tree mesh are generating static models, to change or move branch user must change parameters inside L-system, and recalculate whole model. To prevent unnecessary actions and calculation the \textit{Bézier curve} was added as the tree skeleton. Adding possibility of changing Bézier points along Bézier curve, user can change every branch only by moving it's handler and recalculating only this alternated branch.
+\par After long years of plants observations the conclusion was brought, every plant can be treated as a very complex fractal. The most important feature of this structure is self-similarity. In mathematics, a self-similar object is exactly or approximately similar to a part of itself (i.e. the whole has the same shape as one or more of the parts)\cite{SelfSimi}. Because of complexity of plants as fractals the simplifications must be applied. To do this the L-system can be used.
 Mentioned above technique is based on rewriting rules, so on replacing sub-terms of a formula with other terms. All formulas and terms are represented as strings, and L-system is all about changing one string to another based on rules. Every system has to have starting word, called axiom, rules of productions and number of iterations, so how many times rules must be applied to word. 
 
-\section{Procedural Systems}
+\section{Procedural systems}
 %Co ta so proceduralne systemy. Kazdy podpunkt powinien przechodzic do nastepnego plynnie.
 Creating data algorithmically, based on mathematical equations, is the core of procedural system.  This mean that program creates content on its own, or with limited or indirect user input. In case of L-systems there are few possibilities of creating procedural content using simple or more complicated L-systems.
 
 \subsection{OL-system}
-Most basic L-System is context-free L-system, called OL-system, where there can be multiple replacement rules to any given value. In example:
+Most basic L-system is context-free L-system, called OL-system, where there can be multiple replacement rules to any given value. In example:
 \begin{equation}
 \begin{aligned}
 A \longrightarrow \alpha \\
@@ -148,7 +148,7 @@ L-systems are operating on symbols, so it's mean that it will always creates lis
 
 
 
-\subsection{Bracket L-System}
+\subsection{Bracket L-system}
 OL-systems always create one long continued line. To add branching like behaviour, new characters must be added. Using \textit{[} and \textit{]} the \textit{branches} can be created. First character is responsible for starting the branch and next for closing it. Branch is simply new line in geometric interpretation of string created by L-system \figurename\ref{branchingL}.
 \begin{figure}[!htp]
 \centering
@@ -217,11 +217,11 @@ To implement program, from which screenshot will be presented ,all mentioned abo
 \begin{itemize}[labelindent=5.5em,labelsep=1cm,leftmargin=*]
 \item [LType] description of parameter, its definition as float and name of object
 \item [LFunction] definition of production and collection of parameters used in this production
-\item [LObject] object of L-System
+\item [LObject] object of L-system
 \item [PosRot] quaternion and position
 \end{itemize}
 Every \textit{LObject} have list of \textit{LFunction} and Dictionary of \textit{LType}, where \textit{Key} is string name and \textit{Value} is float.
-Class where are all methods that calculates L-System productions is \textit{Interpreter}, where there are 2  functions \textit{CreateTreeString and} \textit{CreateBezierTree(LObject currentObject)}. First create word from rules and second creates tree skeleton based on this word. \par
+Class where are all methods that calculates L-system productions is \textit{Interpreter}, where there are 2  functions \textit{CreateTreeString and} \textit{CreateBezierTree(LObject currentObject)}. First create word from rules and second creates tree skeleton based on this word. \par
 Word is created by replacing one string by another using rules corresponded to LObject. Because in this implementation only Parametric L-system is used, all parameters must be evaluated in every iteration. There are two main cases to do this. When parameters inside bracket have mathematical expression, and when they don't. Second event is simpler to evaluate because algorithm have to find corresponded value to string representation in Dictionary, and than change it for float value. It's performed only at the beginning of algorithm, and with every function. Thanks to this, algorithm does not need to change every parameter in every iteration, it's done only once.
 In example Equation~\ref{eq:staticEv}
 \begin{equation} \label{eq:staticEv}
@@ -235,7 +235,7 @@ Parameters that have mathematical expression between them have another approach 
   \end{equation}
   In this example at Equation~\ref{eq:dynaEv} the rule $F(l)$ must be found in list of production of current \textit{LObject}, \textit{l} and \textit{lr} parameters will have to be found in Dictionary of parameters, $ \cdot$ sign must be interpreted as multiplication sign, and the last step is to return result as string representation of float, so if \textit{l = 6} and \textit{lr = 0.32} the result of this rule would be \textit{F(1.92)}.\par
 Second part of algorithm is to generate tree skeleton, based on created before word. String may consist of several thousand characters, so analysing it is the most time consuming part of this algorithm.
-Every Bézier Curve has it's parameters such as \textit{normal, bi normal and tangent vector}, corresponded to \textit{X,Y and Z position}. Every branch is separate Bézier Curve, which consist of Bézier Points. Those structures can be moved, deleted or added. That operations are based on steering characters in the word.	
+Every Bézier curve has it's parameters such as \textit{normal, bi normal and tangent vector}, corresponded to \textit{X,Y and Z position}. Every branch is separate Bézier curve, which consist of Bézier points. Those structures can be moved, deleted or added. That operations are based on steering characters in the word.	
 Last step is to generate  mesh based on points of skeleton. Every point on Bézier curve is center of one 3D cylindrical mesh. Normal, binormal and tangend are used in this part to calculate properly bending angles.
 All calculation are based on Quaternions rotations, to ensure appropriate angles, and because that how the Unity is handling the angles.
 \begin{figure}[!htp]
@@ -272,7 +272,7 @@ All calculation are based on Quaternions rotations, to ensure appropriate angles
        \end{figure}
    \fi
 \section{Results}
-For each of the example the same values was used. Five segments on the side surface and five points on spline, it's mean that every curve was divided on five equal parts. Each result of implemented algorithm was divided into two pictures, screenshot of model generated by algorithm and model after changes. Changes was made by transforming Bézier Points on corresponded to branch Bézier Curve. First all the example and it's description was shown, then the pictures. Description of every example System contains rules, axiom and number of iteration used within it.
+For each of the example the same values was used. Five segments on the side surface and five points on spline, it's mean that every curve was divided on five equal parts. Each result of implemented algorithm was divided into two pictures, screenshot of model generated by algorithm and model after changes. Changes was made by transforming Bézier points on corresponded to branch Bézier curve. First all the example and it's description was shown, then the pictures. Description of every example system contains rules, axiom and number of iteration used within it.
 \subsection*{Example 1}
 In first example for 5 iterations the number of branches is 468, word forming tree have 46086 chars and number of vertices in model is 87200.\par
 This example is modification of simple fractal plant described in \cite{prusinABOP}.
@@ -320,49 +320,11 @@ r\rightarrow 25
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \newpage
 %dodac refleksje i po co to w ogole robie.
+
+
 \subsection*{Example 2}
-Next example have 171 branches, world forming tree have 24918 chars and 73700 vertices in model.\par
-In this case the custom and longer rules have been used to make model looks like non-deterministic and more chaotic. Model before changes was shown at \figurename\ref{przyklad2.siatka}, and after changes at \figurename\ref{przyklad2.siatkaMOD}. In first example every variable had exactly one parameter without any mathematical operations, except $F(l \cdot 2)$. But in the second  every operation on parameter had to be evaluated and changed to float value, so the time of the calculation had increased significantly. Thanks to usage of multiple parameters and operation between them user can create more complicated structures, using less rules, but for the price of time for parameter evaluations.\\
-Rules: \newline
-\begin{equation}
-F(l)\rightarrow F(l\cdot2) 
-\end{equation}
-\begin{equation}
-X(l,w) \rightarrow F(w\cdot l)[/(r\cdot l)X(l,w)-(r)X(w,w)]+(r)F(l)[\setminus(l)X(l,w)+(r)X(l,w)]-(r)F(w)
-\end{equation}
-Axiom:
-\begin{center}
-X(1)
-\end{center}
-Number of iterations:
-\begin{center}
-5
-\end{center}
-Variables:
-\begin{equation}
-r\rightarrow 17.2
-\end{equation}
-
-\begin{figure}[!htp]
-\centering
-\begin{subfigure}{.49\textwidth}
-  \centering
-  \includegraphics[width=0.8\linewidth]{przyklad2}
-\caption{Mesh withouth modification.\\Own source. \label{przyklad2.siatka}}
-\end{subfigure}
-\begin{subfigure}{.49\textwidth}
-  \centering
-  \includegraphics[width=0.8\linewidth]{przyklad2MOD}
-\caption{Mesh after modification.\\Own source. \label{przyklad2.siatkaMOD}}
-\end{subfigure}
-\caption{Comparison of meshes for example  2.}
-\label{przyklad2}
-\end{figure}
-\newpage
-
-\subsection*{Example 3}
 Last example have 214 branches, world world forming tree have 24918 chars and 73700 vertices in model. 
-\figurename \ref{przyklad3.siatka} presents unchanged model of last example, \figurename \ref{przyklad3.siatkaMOD} same model after changes. Creating more complicated rule, based on those in example 2, and adding two more simple rules the model in example 3 is more non-deterministic and tree-like than other examples.
+\figurename \ref{przyklad2.siatka} presents unchanged model of last example, \figurename \ref{przyklad2.siatkaMOD} same model after changes. 
 Rules: \newline
 \begin{equation}
 F(l)\rightarrow F(l\cdot2) 
@@ -402,16 +364,16 @@ k\rightarrow 0.707
 \centering
 \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=0.8\linewidth]{przyklad3MOD}
-\caption{Mesh without modification.\\Own source. \label{przyklad3.siatka}}
+  \includegraphics[width=0.8\linewidth]{przyklad2MOD}
+\caption{Mesh without modification.\\Own source. \label{przyklad2.siatka}}
 \end{subfigure}
 %
 \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=0.8\linewidth]{przyklad3}
-\caption{Mesh after modification.\\Own source. \label{przyklad3.siatkaMOD}}
+  \includegraphics[width=0.8\linewidth]{przyklad2}
+\caption{Mesh after modification.\\Own source. \label{przyklad2.siatkaMOD}}
 \end{subfigure}
-\caption{Comparison of meshes for example  3.}
+\caption{Comparison of meshes for example 2.}
 \label{przyklad3}
 \end{figure}
 \newpage
@@ -430,12 +392,12 @@ Parser created with this implementation is simple, but creating possibility to e
 %Jeszcze raz sprawdz bibliografie
 \begin{thebibliography}{99}
 \small
-\bibitem{Herbaceus}Prusinkiewicz P., Lindenmayer A.,Hanan J.,\textit{ Development models of herbaceous plants for computer imagery purposes},  SIGGRAPH Comput. Graph., New York, 1998
-\bibitem{Sim} Zaniewski T., Bangay S., \textit{ Simulation and visualization of fire using extended lindenmayer systems}, AFRIGRAPH '03, Cape Town, 2003
+\bibitem{Herbaceus}Prusinkiewicz P., Lindenmayer A.,Hanan J., \textit{Development models of herbaceous plants for computer imagery purposes}, SIGGRAPH Comput. Graph., New York, 1998
+\bibitem{Sim} Zaniewski T., Bangay S., \textit{Simulation and visualization of fire using extended lindenmayer systems}, AFRIGRAPH '03, Cape Town, 2003
 \bibitem{WebTree}Qi H.,Qiu R.,Jia J., \textit{L-system based interactive and lightweight web3D tree modeling}, VRCAI '11, Hong Kong, 2011
-\bibitem{EnviroTree}  Zhuming L., and King S., \textit{Simulating tree growth based on internal and environmental factors}, GRAPHITE '05, Dunedin, 2005
+\bibitem{EnviroTree}Zhuming L., King S., \textit{Simulating tree growth based on internal and environmental factors}, GRAPHITE '05, Dunedin, 2005
 \bibitem{Spray}Hanan J., Renton M., Yorston E., \textit{Simulating and visualising spray deposition on plant canopies}, GRAPHITE '03, Melbourne, 2003
-\bibitem{MLSystem}Manousakis S., \textit{Musical L-Systems}, The Royal Conservatory,Hague, 2006
+\bibitem{MLSystem}Manousakis S., \textit{Musical L-Systems}, The Royal Conservatory, Hague, 2006
 \bibitem{LBrain}Palmer M., \textit{Evolved neurogenesis and synaptogenesis for robotic control: the L-brain model}, GECCO '11, Dublin, 2011
 \bibitem{L-Studio}L-studio, \url{http://algorithmicbotany.org/virtual_laboratory/}
 \bibitem{ABartniak}Bartniak A., \textit{3D animation of plant development using L-systems}, M.Sc. thesis, Lodz, 2013
