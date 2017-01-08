@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  30 OCT 2016 21:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  8 JAN 2017 12:36
 entering extended mode
 **./art.tex
 (art.tex
@@ -779,11 +779,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 106.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 105.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 106.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 105.
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--113
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
 
  []
 
@@ -791,22 +791,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--113
 File: images/DOL-system.png Graphic file (type png)
 
 <use images/DOL-system.png>
-Package pdftex.def Info: images/DOL-system.png used on input line 118.
+Package pdftex.def Info: images/DOL-system.png used on input line 117.
 (pdftex.def)             Requested size: 53.77354pt x 84.73323pt.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 136.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 135.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 136.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 135.
  [2]
 <images/branchingL.png, id=15, 718.93594pt x 544.28343pt>
 File: images/branchingL.png Graphic file (type png)
 
 <use images/branchingL.png>
-Package pdftex.def Info: images/branchingL.png used on input line 155.
+Package pdftex.def Info: images/branchingL.png used on input line 154.
 (pdftex.def)             Requested size: 250.95233pt x 189.98714pt.
 
 Underfull \vbox (badness 5460) has occurred while \output is active []
@@ -817,15 +817,20 @@ Overfull \hbox (5.89597pt too wide) in paragraph at lines 164--165
 tem was de-vel-oped. Thanks
  []
 
-[4 <./images/branchingL.png>] [5] [6]
-<images/diagram2.png, id=34, 676.5275pt x 360.34625pt>
+[4 <./images/branchingL.png>] [5]
+Overfull \hbox (1.66418pt too wide) in paragraph at lines 219--220
+[]\OT1/ptm/m/n/10.95 has def-i-ni-tion of pro-duc-tion and col-lec-tion of pa-r
+am-e-ters used
+ []
+
+[6] <images/diagram2.png, id=34, 676.5275pt x 360.34625pt>
 File: images/diagram2.png Graphic file (type png)
 
 <use images/diagram2.png>
-Package pdftex.def Info: images/diagram2.png used on input line 243.
+Package pdftex.def Info: images/diagram2.png used on input line 242.
 (pdftex.def)             Requested size: 358.5049pt x 190.9606pt.
  [7 <./images/diagram2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 253--256
+Underfull \hbox (badness 10000) in paragraph at lines 252--255
 
  []
 
@@ -833,17 +838,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--256
 File: images/siatka1.png Graphic file (type png)
 
 <use images/siatka1.png>
-Package pdftex.def Info: images/siatka1.png used on input line 283.
+Package pdftex.def Info: images/siatka1.png used on input line 282.
 (pdftex.def)             Requested size: 140.53601pt x 138.16847pt.
 
 <images/siatkaMOD1.png, id=42, 721.94719pt x 718.93594pt>
 File: images/siatkaMOD1.png Graphic file (type png)
 
 <use images/siatkaMOD1.png>
-Package pdftex.def Info: images/siatkaMOD1.png used on input line 289.
+Package pdftex.def Info: images/siatkaMOD1.png used on input line 288.
 (pdftex.def)             Requested size: 140.53601pt x 139.94511pt.
  [8]
-Underfull \hbox (badness 10000) in paragraph at lines 298--301
+Underfull \hbox (badness 10000) in paragraph at lines 297--300
 
  []
 
@@ -851,32 +856,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--301
 File: images/przyklad2.png Graphic file (type png)
 
 <use images/przyklad2.png>
-Package pdftex.def Info: images/przyklad2.png used on input line 339.
+Package pdftex.def Info: images/przyklad2.png used on input line 338.
 (pdftex.def)             Requested size: 140.53601pt x 167.96564pt.
 
 <images/przyklad2MOD.png, id=47, 524.71031pt x 658.71094pt>
 File: images/przyklad2MOD.png Graphic file (type png)
 
 <use images/przyklad2MOD.png>
-Package pdftex.def Info: images/przyklad2MOD.png used on input line 345.
+Package pdftex.def Info: images/przyklad2MOD.png used on input line 344.
 (pdftex.def)             Requested size: 140.53601pt x 176.42706pt.
  [9 <./images/siatka1.png> <./images/siatkaMOD1.png>] [10 <./images/przyklad2.p
 ng> <./images/przyklad2MOD.png>]
-Underfull \hbox (badness 1158) in paragraph at lines 376--377
+Underfull \hbox (badness 1158) in paragraph at lines 378--379
 \OT1/ptm/m/it/10 and frac-tional di-men-sion\OT1/ptm/m/n/10 , Sci-ence, vol. 15
 6, no. 3775, 1967, pp. 636{638.
  []
 
 [11] (art.aux) )
-(\end occurred when \ifdefined on line 388 was incomplete) 
+(\end occurred when \ifdefined on line 386 was incomplete) 
 Here is how much of TeX's memory you used:
- 5278 strings out of 493334
- 77775 string characters out of 3136672
- 155847 words of memory out of 3000000
- 8678 multiletter control sequences out of 15000+200000
+ 5277 strings out of 493334
+ 77769 string characters out of 3136672
+ 154843 words of memory out of 3000000
+ 8677 multiletter control sequences out of 15000+200000
  47242 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,13n,43p,1151b,569s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,13n,43p,1012b,569s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
@@ -888,7 +893,7 @@ e1/urw/symbol/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/symbo
 l/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on art.pdf (11 pages, 643453 bytes).
+Output written on art.pdf (11 pages, 643406 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
